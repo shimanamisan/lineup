@@ -1,0 +1,62 @@
+.p-mainVisual {
+  position: relative;
+  width: 100%;
+  padding-top: 25rem;
+
+  &__body {
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 3rem;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // z-index: 5;
+    font-family: "Libre Caslon Text", serif;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    position: relative;
+    margin-top: 3rem;
+    padding-left: 5rem;
+    &::before {
+      content: "";
+      display: block;
+      width: 4rem;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      left: 0.1rem;
+      top: 0.7rem;
+    }
+  }
+
+  &__movie {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -100;
+  }
+
+  &__cover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: -99;
+  }
+}

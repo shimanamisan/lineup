@@ -1,0 +1,15 @@
+.p-header {
+  color: #fff;
+
+  &__nav {
+    display: block;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    margin-right: $space_xxl;
+  }
+}
