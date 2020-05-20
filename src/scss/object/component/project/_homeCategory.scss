@@ -59,23 +59,22 @@
       background-image: url(/dist/img/019.jpg);
     }
     &--panel03 {
-      background-image: url(/dist/img/022.jpg);
+      background-image: url(/dist/img/072.jpg);
     }
     &--panel04 {
-      background-image: url(/dist/img/022.jpg);
+      background-image: url(/dist/img/009.jpg);
     }
     &--panel05 {
       background-image: url(/dist/img/053.jpg);
     }
     &--panel06 {
-      background-image: url(/dist/img/009.jpg);
+      background-image: url(/dist/img/070.jpg);
     }
   }
 
   &__footer {
     position: relative;
     color: #f7f8f8;
-
     &--wrapp {
       position: absolute;
       top: 50%;
@@ -90,8 +89,7 @@
       margin-bottom: 20px;
       letter-spacing: 1.5;
     }
-    &--text {
-      font-size: 1.5rem;
+    &--item {
     }
   }
 }

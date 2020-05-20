@@ -10,6 +10,10 @@
     transform: translate(-50%, -75%);
     width: 980px;
     /* margin: 40px auto; */
+
+    @include mq() {
+      width: 100%;
+    }
   }
 
   &__wrapp {
@@ -36,6 +40,7 @@
 
   &__item {
     margin-bottom: $space_s;
+    display: flex;
   }
 
   &__date {

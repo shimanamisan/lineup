@@ -46,6 +46,10 @@
     width: auto;
     height: auto;
     z-index: -100;
+
+    @include mq() {
+      width: 100%;
+    }
   }
 
   &__cover {
