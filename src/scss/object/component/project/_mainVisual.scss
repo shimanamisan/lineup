@@ -2,6 +2,9 @@
   position: relative;
   width: 100%;
   padding-top: 25rem;
+  @include mq() {
+    padding-top: 12rem;
+  }
 
   &__body {
     color: #fff;
@@ -15,6 +18,9 @@
     // transform: translate(-50%, -50%);
     // z-index: 5;
     font-family: "Libre Caslon Text", serif;
+    @include mq() {
+      font-size: 2rem;
+    }
   }
 
   &__text {
@@ -48,7 +54,8 @@
     z-index: -100;
 
     @include mq() {
-      width: 100%;
+      left: calc(100% - 900px);
+      min-height: 700px;
     }
   }
 

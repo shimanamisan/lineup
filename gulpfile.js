@@ -33,6 +33,9 @@ const sass_Build = function (done) {
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     // {outputStyle: 'compressed'}はgulp-sassのオプションで出力ファイルを圧縮している
     // https://www.npmjs.com/package/gulp-sass
+    // .pipe(
+    //   autoprefixer(["last 3 versions", "ie >= 8", "Android >= 4", "iOS >= 8"])
+    // )
     .pipe(gulp.dest(paths.dstDir + "/css/"));
   done();
 };

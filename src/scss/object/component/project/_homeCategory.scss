@@ -1,14 +1,22 @@
 .p-homeCategory {
   position: relative;
   overflow: hidden;
-  padding: 60px 20px;
+  padding: 42px 16px;
   height: 700px;
   background-color: rgba(0, 0, 0, 0.7);
+  @include mq() {
+    overflow: visible;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 
   &__item {
     width: 33%;
     height: 50%;
     float: left;
+    @include mq() {
+      width: 50%;
+    }
   }
 
   &__cover {
@@ -53,22 +61,22 @@
     }
 
     &--panel01 {
-      background-image: url(/dist/img/022.jpg);
+      background-image: url(../img/022.jpg);
     }
     &--panel02 {
-      background-image: url(/dist/img/019.jpg);
+      background-image: url(../img/019.jpg);
     }
     &--panel03 {
-      background-image: url(/dist/img/072.jpg);
+      background-image: url(../img/072.jpg);
     }
     &--panel04 {
-      background-image: url(/dist/img/009.jpg);
+      background-image: url(../img/009.jpg);
     }
     &--panel05 {
-      background-image: url(/dist/img/053.jpg);
+      background-image: url(../img/053.jpg);
     }
     &--panel06 {
-      background-image: url(/dist/img/070.jpg);
+      background-image: url(../img/070.jpg);
     }
   }
 
