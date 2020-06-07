@@ -1,0 +1,7 @@
+.p-youtube {
+  width: 560px;
+  height: 315px;
+  @include mq() {
+    width: 100%;
+  }
+}

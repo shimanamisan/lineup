@@ -4,5 +4,8 @@
   &__text {
     text-align: center;
     line-height: 80px;
+    @include mq() {
+      line-height: unset;
+    }
   }
 }
