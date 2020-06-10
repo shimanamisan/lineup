@@ -1,18 +1,16 @@
 .p-homeCategory {
   position: relative;
-  overflow: hidden;
   padding: 42px 16px;
-  height: 700px;
+  // height: 700px;
   background-color: rgba(0, 0, 0, 0.7);
   @include mq() {
-    overflow: visible;
     // padding-top: 120px;
     // padding-bottom: 120px;
   }
 
   &__item {
     width: 33%;
-    height: 50%;
+    // height: 50%;
     float: left;
     @include mq() {
       width: 50%;
@@ -28,13 +26,21 @@
 
   &__img {
     position: relative;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 0.4s;
     cursor: pointer;
+
+    & a {
+      position: relative;
+      text-decoration: none;
+      display: block;
+      padding-bottom: 90%;
+      z-index: 5;
+    }
 
     &:hover {
       transform: scale(1.15);
@@ -47,17 +53,28 @@
       background-color: rgba(0, 0, 0, 0.7);
       height: 100%;
       width: 100%;
-    }
-
-    &--content {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    &--inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+    }
+
+    &--content {
       display: block;
       color: #fff;
       font-size: 2rem;
       text-align: center;
+      @include mq() {
+        font-size: 0.85rem;
+      }
     }
 
     &--panel01 {

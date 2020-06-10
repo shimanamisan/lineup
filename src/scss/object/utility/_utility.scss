@@ -1,4 +1,18 @@
-.u-row {
-  margin: 0 auto;
-  width: 80%;
+.u {
+  &-row {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &-hidden {
+    overflow: hidden;
+  }
+
+  &-group {
+    &:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+  }
 }

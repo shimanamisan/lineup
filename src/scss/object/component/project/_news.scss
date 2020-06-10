@@ -4,15 +4,13 @@
   position: relative;
 
   &__inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%);
+    margin: 40px auto;
+    padding: 150px 20px 140px;
     width: 980px;
-    /* margin: 40px auto; */
-
+    box-sizing: border-box;
     @include mq() {
       width: 100%;
+      padding: 150px 5px 140px;
     }
   }
 

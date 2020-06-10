@@ -1,13 +1,17 @@
 .p-mainVisual {
   position: relative;
   width: 100%;
-  padding-top: 25rem;
   @include mq() {
-    padding-top: 12rem;
+    // padding-top: 12rem;
   }
 
   &__body {
     color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    // transform: translate(-50%, -50%);
+    animation: c-fadein 0.5s ease forwards;
   }
 
   &__title {
@@ -34,7 +38,7 @@
       width: 4rem;
       height: 1px;
       background-color: #fff;
-      position: absolute;
+      // position: absolute;
       left: 0.1rem;
       top: 0.7rem;
     }

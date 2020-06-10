@@ -1,5 +1,5 @@
 .l-header {
-  height: 80px;
+  height: 100px;
   display: flex;
   box-sizing: border-box;
   padding-left: 32px;
@@ -10,4 +10,9 @@
   width: 100%;
   z-index: $z-index_m;
   // background: rgba(255, 255, 255, 0.6);
+
+  @include mq() {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }

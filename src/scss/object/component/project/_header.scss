@@ -16,6 +16,13 @@
     margin-right: $space_xxl;
   }
 
+  &__logo {
+    @include mq() {
+      width: 170px;
+      height: 80px;
+    }
+  }
+
   &--spmenu {
     display: none;
     transition: all 0.4s;
