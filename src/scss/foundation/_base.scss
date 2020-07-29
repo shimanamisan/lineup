@@ -1,6 +1,7 @@
 // font-sizeやcolor inputなどを共通化しておく。
 html,
 body {
+  display: block;
   width: 100%;
   color: $font-color_default;
   font-size: $font-size_default;
@@ -39,4 +40,8 @@ input {
 :after,
 :before {
   box-sizing: inherit; // 親要素の値を継承する
+}
+
+main {
+  display: block;
 }

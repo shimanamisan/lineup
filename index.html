@@ -7,13 +7,22 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="dist/css/style.css" />
     <title>LINEUP BASEBALLCULB</title>
   </head>
   <body>
     <header class="l-header js-scroll-trigger">
       <h1 class="p-header__logo">
-        <a href="#"><img src="./dist/img/LNIEUP.png" alt="" /></a>
+        <a href="#"
+          ><img
+            src="./dist/img/LNIEUP.png"
+            class="p-header__logo__img js-p-header__logo"
+            alt=""
+        /></a>
       </h1>
       <div class="p-header--spmenu">
         <span></span>
@@ -45,7 +54,7 @@
         </video>
         <div class="p-mainVisual__cover"></div>
       </section>
-      <section class="c-homeContainer p-news">
+      <section class="p-news">
         <div class="p-news__inner">
           <div class="p-news__wrapp">
             <h2 class="p-news__title">お知らせ</h2>
@@ -83,7 +92,7 @@
           </div>
         </div>
       </section>
-      <section class="c-homeContainer p-homeCategory u-group">
+      <section class="p-homeCategory u-group">
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel01">
@@ -147,12 +156,11 @@
       </section>
 
       <section class="c-homeContainer p-homeCategory__footer">
-        <div class="p-homeCategory__footer--wrapp">
-          <h2 class="p-homeCategory__footer--title">
+        <div class="p-homeCategory__footer__wrapp">
+          <h2 class="p-homeCategory__footer__title">
             チームのコンセプトは、『楽しみながら勝つ』
           </h2>
-          <p class="p-homeCategory__footer--text">
-            LINEUPは、土曜日活動チームとして大阪市内で活動している結成12年目のチームです。<br />
+          <p class="p-homeCategory__footer__text">
             チームのコンセプトは、『楽しみながら勝つ』という草野球の永遠のテーマを掲げています。<br />
             これからも、仲良く、前向きに、チーム一丸となって戦っていきます！
           </p>
@@ -160,9 +168,10 @@
       </section>
 
       <section class="c-homeContainer p-homeCategory u-hidden">
-        <div class="p-homeCategory__footer p-homeCategory__footer--wrapp">
-          <ul class="p-homeCategory__footer">
-            <li class="p-homeCategory__footer--item">
+        <h2 class="p-homeCategory__movie__title">MOVIE NEWS</h2>
+        <div class="p-homeCategory__movie p-youtube__container">
+          <ul class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container" style="width: calc(980px * 4);">
+            <li class="p-homeCategory__movie__item p-slider__item">
               <iframe
                 class="p-youtube"
                 src="https://www.youtube.com/embed/n6uQNIvgLco"
@@ -171,7 +180,7 @@
                 allowfullscreen
               ></iframe>
             </li>
-            <li class="p-homeCategory__footer--item">
+            <li class="p-homeCategory__movie__item p-slider__item">
               <iframe
                 class="p-youtube"
                 src="https://www.youtube.com/embed/n6uQNIvgLco"
@@ -180,7 +189,25 @@
                 allowfullscreen
               ></iframe>
             </li>
-            <li class="p-homeCategory__footer--item">
+            <li class="p-homeCategory__movie__item p-slider__item">
+              <iframe
+                class="p-youtube"
+                src="https://www.youtube.com/embed/n6uQNIvgLco"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </li>
+            <li class="p-homeCategory__movie__item p-slider__item">
+              <iframe
+                class="p-youtube"
+                src="https://www.youtube.com/embed/n6uQNIvgLco"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </li>
+            <li class="p-homeCategory__movie__item p-slider__item">
               <iframe
                 class="p-youtube"
                 src="https://www.youtube.com/embed/n6uQNIvgLco"
@@ -198,6 +225,6 @@
         Copyright© LINEUP BASEBALLCULB All Rights Reserved.
       </p>
     </footer>
-    <script src="dist/js/bundle.js"></script>
+    <script src="./dist/js/bundle.js"></script>
   </body>
 </html>

@@ -6,7 +6,7 @@ $breackpoints: (
   'sm':'screen and (max-width: 414px)',
   'md': 'screen and (max-width: 768px)',
   'lg': 'screen and (max-width: 1000px)',
-  'xl': 'screen and (max-width: 1200px)'
+  'xl': 'screen and (max-width: 1600px)'
 ) !default;
 
 @mixin mq($breackpoint: sm){

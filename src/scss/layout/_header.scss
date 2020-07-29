@@ -9,6 +9,7 @@
   position: fixed;
   width: 100%;
   z-index: $z-index_m;
+  transition: all 0.6s ease-out;
   // background: rgba(255, 255, 255, 0.6);
 
   @include mq() {

@@ -1,4 +1,5 @@
 .p-mainVisual {
+  height: 800px;
   position: relative;
   width: 100%;
   @include mq() {
@@ -11,11 +12,11 @@
     top: 50%;
     left: 10%;
     // transform: translate(-50%, -50%);
-    animation: c-fadein 0.5s ease forwards;
+    animation: c-fadein 2.0s ease forwards;
   }
 
   &__title {
-    font-size: 3rem;
+    font-size: 4rem;
     // position: absolute;
     // top: 50%;
     // left: 50%;
@@ -32,13 +33,13 @@
     position: relative;
     margin-top: 3rem;
     padding-left: 5rem;
-    &::before {
+    &::after {
       content: "";
       display: block;
       width: 4rem;
       height: 1px;
       background-color: #fff;
-      // position: absolute;
+      position: absolute;
       left: 0.1rem;
       top: 0.7rem;
     }

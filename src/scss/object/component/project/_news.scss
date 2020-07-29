@@ -2,10 +2,9 @@
   //   padding: 50px;
   background: #fff;
   position: relative;
-
   &__inner {
-    margin: 40px auto;
-    padding: 150px 20px 140px;
+    margin: 0 auto;
+    padding: 200px 20px 250px;
     width: 980px;
     box-sizing: border-box;
     @include mq() {
@@ -13,12 +12,10 @@
       padding: 150px 5px 140px;
     }
   }
-
   &__wrapp {
     margin-bottom: $space_3l;
     text-align: center;
   }
-
   &__nav {
     @include custumRadius(5px);
     padding: 16px 24px;
@@ -28,17 +25,15 @@
       font-size: 14px;
     }
   }
-
   &__title {
     font-size: 3rem;
   }
-
   &__body {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     overflow-y: scroll;
     box-sizing: border-box;
-    height: 130px;
+    height: auto;
     @include mq() {
       width: 100%;
       padding: 8px;

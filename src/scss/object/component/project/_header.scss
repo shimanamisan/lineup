@@ -1,6 +1,12 @@
 .p-header {
   color: #fff;
-
+  &__scroll {
+    width: 70%;
+    transition: all 0.6s ease-out;
+    @include mq(){
+      width: 90%;
+    }
+  }
   &__nav {
     display: block;
     @include mq() {
@@ -15,14 +21,15 @@
   &__item {
     margin-right: $space_xxl;
   }
-
   &__logo {
     @include mq() {
       width: 170px;
       height: 80px;
     }
+    &__img {
+      transition: all 0.6s ease-out;
+    }
   }
-
   &--spmenu {
     display: none;
     transition: all 0.4s;
@@ -57,5 +64,8 @@
     @include mq() {
       display: inline;
     }
+  }
+  & .active{
+    
   }
 }
