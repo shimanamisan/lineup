@@ -112,26 +112,55 @@
     width: 100%;
     clear: both;
     display: flex;
+    justify-content: space-around;
     @include mq() {
       display: block;
     }
-    &--wrapp {
+    &__wrapp {
       position: absolute;
+      margin: 0 auto;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 90%;
+      padding-left: 100px;
+      box-sizing: border-box;
+      width: 100%;
     }
 
-    &--title {
+    &__title {
       font-size: 3rem;
       margin-bottom: 20px;
+
       letter-spacing: 1.5;
       @include mq() {
         font-size: 16px;
       }
     }
-    &--item {
+    &__text {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__movie {
+    position: relative;
+    color: #f7f8f8;
+    width: 100%;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    @include mq() {
+      display: block;
+    }
+    &__list {
+      overflow: hidden;
+    }
+    &__title {
+      padding-top: 40px;
+      color: #fff;
+      font-size: 3rem;
+      text-align: center;
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 }

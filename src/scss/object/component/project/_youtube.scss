@@ -1,7 +1,19 @@
 .p-youtube {
-  width: 560px;
-  height: 315px;
+  width: 980px;
+  height: 570px;
+  vertical-align: bottom;
   @include mq() {
+    width: 100%;
+  }
+  &__container {
+    position: absolute;
+    margin: 0 auto;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
     width: 100%;
   }
 }

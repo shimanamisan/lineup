@@ -29,11 +29,11 @@
     font-size: 3rem;
   }
   &__body {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     overflow-y: scroll;
     box-sizing: border-box;
-    height: 130px;
+    height: auto;
     @include mq() {
       width: 100%;
       padding: 8px;
