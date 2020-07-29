@@ -151,8 +151,8 @@
     @include mq() {
       display: block;
     }
-    &__list {
-      overflow: hidden;
+    &__item {
+      float: left;
     }
     &__title {
       padding-top: 40px;
