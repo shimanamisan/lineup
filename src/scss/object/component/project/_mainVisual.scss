@@ -12,7 +12,10 @@
     top: 50%;
     left: 10%;
     // transform: translate(-50%, -50%);
-    animation: c-fadein 2.0s ease forwards;
+    animation: c-fadein 2s ease forwards;
+    @include mq() {
+      top: 34%;
+    }
   }
 
   &__title {
@@ -33,6 +36,10 @@
     position: relative;
     margin-top: 3rem;
     padding-left: 5rem;
+    @include mq() {
+      padding-left: 3rem;
+      font-size: 1.2rem;
+    }
     &::after {
       content: "";
       display: block;
@@ -42,6 +49,9 @@
       position: absolute;
       left: 0.1rem;
       top: 0.7rem;
+      @include mq() {
+        width: 2rem;
+      }
     }
   }
 
@@ -53,13 +63,10 @@
     left: 0;
     min-width: 100vw;
     min-height: 100vh;
-
-    z-index: -100;
-
+    z-index: -99;
     @include mq() {
-      // left: calc(100% - 900px);
-      margin-left: -400px;
-      min-height: 700px;
+      margin-left: -420px;
+      min-height: 100vh;
       bottom: unset;
     }
   }

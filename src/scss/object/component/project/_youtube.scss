@@ -15,5 +15,8 @@
     padding-right: 50px;
     box-sizing: border-box;
     width: 100%;
+    @include mq(){
+      top: 3%;
+    }
   }
 }

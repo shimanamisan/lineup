@@ -1,5 +1,7 @@
 .c-homeContainer {
   height: 800px;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  @include mq(){
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }

@@ -10907,7 +10907,7 @@ youtube動画自動無限ループ
     //
     var sliderContainerWidth = sliderItemWidth * sliderItemNum;
     //
-    const DURATION = 6000;
+    const DURATION = 10000;
 
     // オブジェクトを返す
     return {
@@ -10932,7 +10932,7 @@ youtube動画自動無限ループ
         // ループさせる
         setTimeout(function () {
           that.sliderLoop();
-        }, 6000);
+        }, 10000);
       },
       init: function () {
         // 関数の中からでもthisの参照先を、initというオブジェクト自身に指定出来るようにthisを変数に格納

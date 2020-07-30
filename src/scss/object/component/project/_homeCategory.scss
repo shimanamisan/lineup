@@ -70,6 +70,7 @@
 
     &--inner {
       position: absolute;
+      width: 80%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -125,6 +126,10 @@
       padding-left: 100px;
       box-sizing: border-box;
       width: 100%;
+      @include mq() {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
 
     &__title {
@@ -138,6 +143,9 @@
     }
     &__text {
       font-size: 1.5rem;
+      @include mq() {
+        font-size: 1.1rem;
+      }
     }
   }
 
