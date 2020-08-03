@@ -1,6 +1,7 @@
 // font-sizeやcolor inputなどを共通化しておく。
 html,
 body {
+  -webkit-overflow-scrolling: touch;
   display: block;
   width: 100%;
   color: $font-color_default;

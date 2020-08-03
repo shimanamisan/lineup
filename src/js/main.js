@@ -3,7 +3,34 @@
 var $ = require("jquery");
 
 $(function () {
-  // スクロールアニメーション
+  /*******************************************
+ユーザーエージェントよりスマホ端末か判定する
+*********************************************/
+  // 即時関数をの返り値を変数に格納（オブジェクトの形で返ってくる）
+  var UserAgent = (function () {
+    var phoneActive = /iPhone|iPod|iPad|Android/i.test(
+      window.navigator.userAgent
+    );
+    var $mainVisual = $('.p-mainVisual') 
+
+    // オブジェクトを返す
+    return {
+      phoneFlg: function () {
+        if (phoneActive) {
+          $mainVisual.css({
+            height: `${window.outerHeight}`
+          })
+        }
+      },
+    };
+  })();
+
+  // オブジェクトの中の関数を実行
+  UserAgent.phoneFlg();
+
+  /****************************************
+スクロールアニメーション
+*****************************************/
   var $jsScrollHeader = $(".js-scroll-trigger");
   var $jsHeaderLogo = $(".js-p-header__logo");
 
@@ -19,9 +46,18 @@ $(function () {
   });
 
   /****************************************
+SPナビメニュー
+*****************************************/
+  var $spMenuTrigger = $("#js-spmenu-trigger");
+  var $spNavTrigger = $("#js-nav-trigger");
+  $spMenuTrigger.on("click", function () {
+    $spMenuTrigger.toggleClass("burgerActive");
+    $spNavTrigger.toggleClass("navActive");
+  });
+
+  /****************************************
 youtube動画自動無限ループ
 *****************************************/
-
   var loopSlider = (function () {
     // 窓枠となる要素のDOMを取得
     var $sliderContainer = $(".p-slider__container");
@@ -33,13 +69,14 @@ youtube動画自動無限ループ
     var sliderContainerWidth = sliderItemWidth * sliderItemNum;
     //
     const DURATION = 10000;
+    //
+    var windowWidth = window.innerWidth;
 
     // オブジェクトを返す
     return {
       sliderLoop: function () {
         // 関数の中からでもthisの参照先を、sliderLoopというオブジェクト自身に指定出来るようにthisを変数に格納
         var that = this;
-        console.log(that)
         $sliderContainer.animate(
           {
             left: "-=" + sliderItemWidth + "px",
@@ -60,8 +97,12 @@ youtube動画自動無限ループ
         }, 10000);
       },
       init: function () {
+        // if (windowWidth < 400) {
+        //   return false;
+        // }
         // 関数の中からでもthisの参照先を、initというオブジェクト自身に指定出来るようにthisを変数に格納
         var that = this;
+        // console.log(that);
         // スライドさせる大枠の幅を決定する
         // attrメソッド：指定した要素に属性を追加する（今回はstyle属性をjQuery側から書き込んでいる）
         $sliderContainer.attr("style", "width: " + sliderContainerWidth + "px");
@@ -70,9 +111,6 @@ youtube動画自動無限ループ
       },
     };
   })();
-
   // オブジェクト内のメソッドを実行
   loopSlider.init();
-
-  // console.log(loopSlider);
 });

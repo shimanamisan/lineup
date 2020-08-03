@@ -33,8 +33,9 @@
     margin: 0 auto;
     overflow-y: scroll;
     box-sizing: border-box;
-    height: auto;
+    height: 250px;
     @include mq() {
+      height: 210px;
       width: 100%;
       padding: 8px;
     }

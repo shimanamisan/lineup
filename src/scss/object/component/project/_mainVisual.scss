@@ -1,5 +1,5 @@
 .p-mainVisual {
-  height: 800px;
+  height: 100vh;
   position: relative;
   width: 100%;
   @include mq() {
@@ -32,7 +32,7 @@
   }
 
   &__text {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     position: relative;
     margin-top: 3rem;
     padding-left: 5rem;
@@ -65,9 +65,8 @@
     min-height: 100vh;
     z-index: -99;
     @include mq() {
-      margin-left: -420px;
-      min-height: 100vh;
-      bottom: unset;
+      margin-left: -410px;
+      // bottom: unset;
     }
   }
 

@@ -24,12 +24,12 @@
             alt=""
         /></a>
       </h1>
-      <div class="p-header--spmenu">
+      <div id="js-spmenu-trigger" class="p-header__spmenu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <nav class="p-header p-header__nav">
+      <nav id="js-nav-trigger" class="p-header p-header__nav">
         <ul class="p-header__list">
           <li class="p-header__item"><a href="">チーム紹介</a></li>
           <li class="p-header__item"><a href="">チーム規則</a></li>
@@ -49,7 +49,8 @@
             >LINEUPは、土曜日活動チームとして大阪市内で活動している結成12年目のチームです</span
           >
         </div>
-        <video class="p-mainVisual__movie" loop autoplay muted>
+        <video class="p-mainVisual__movie" loop autoplay muted playsinline>
+          <source src="dist/movie/top-video.webm" />
           <source src="dist/movie/top-video.mp4" />
         </video>
         <div class="p-mainVisual__cover"></div>
@@ -71,6 +72,22 @@
               <li class="p-news__item">
                 <span class="p-news__date">2020.05.10</span>
                 <span class="p-news__itemTitle">試合結果を更新しました。</span>
+              </li>
+              <li class="p-news__item">
+                <span class="p-news__date">2020.05.10</span>
+                <span class="p-news__itemTitle">お知らせ</span>
+              </li>
+              <li class="p-news__item">
+                <span class="p-news__date">2020.05.10</span>
+                <span class="p-news__itemTitle">お知らせ</span>
+              </li>
+              <li class="p-news__item">
+                <span class="p-news__date">2020.05.10</span>
+                <span class="p-news__itemTitle">お知らせ</span>
+              </li>
+              <li class="p-news__item">
+                <span class="p-news__date">2020.05.10</span>
+                <span class="p-news__itemTitle">お知らせ</span>
               </li>
               <li class="p-news__item">
                 <span class="p-news__date">2020.05.10</span>
@@ -170,7 +187,10 @@
       <section class="c-homeContainer p-homeCategory u-hidden">
         <h2 class="p-homeCategory__movie__title">MOVIE NEWS</h2>
         <div class="p-homeCategory__movie p-youtube__container">
-          <ul class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container" style="width: calc(980px * 4);">
+          <ul
+            class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container"
+            style="width: calc(980px * 4);"
+          >
             <li class="p-homeCategory__movie__item p-slider__item">
               <iframe
                 class="p-youtube"

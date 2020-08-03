@@ -3,7 +3,8 @@
   height: 500px;
   vertical-align: bottom;
   @include mq() {
-    width: 100%;
+    width: 360px;
+    height: 280px;
   }
   &__container {
     position: absolute;
