@@ -2,16 +2,12 @@
   height: 100vh;
   position: relative;
   width: 100%;
-  @include mq() {
-    // padding-top: 12rem;
-  }
 
   &__body {
     color: #fff;
     position: absolute;
     top: 50%;
     left: 10%;
-    // transform: translate(-50%, -50%);
     animation: c-fadein 2s ease forwards;
     @include mq() {
       top: 34%;
@@ -20,11 +16,6 @@
 
   &__title {
     font-size: 4rem;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // z-index: 5;
     font-family: "Libre Caslon Text", serif;
     @include mq() {
       font-size: 2rem;
@@ -48,9 +39,12 @@
       background-color: #fff;
       position: absolute;
       left: 0.1rem;
-      top: 0.7rem;
+      top: 1rem;
       @include mq() {
         width: 2rem;
+      }
+      @include mq(ssm){
+        top: 0.8rem;
       }
     }
   }

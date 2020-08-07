@@ -1,13 +1,8 @@
 .p-homeCategory {
   position: relative;
   padding: 42px 16px;
-  // height: 700px;
   background-color: rgba(0, 0, 0, 0.7);
-  @include mq() {
-    // padding-top: 120px;
-    // padding-bottom: 120px;
-  }
-
+  
   &__item {
     width: 33%;
     // height: 50%;
@@ -35,8 +30,7 @@
 
   &__img {
     position: relative;
-    // width: 100%;
-    // height: 100%;
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,7 +101,7 @@
     }
   }
 
-  &__footer {
+  &__thirdSection {
     position: relative;
     color: #f7f8f8;
     width: 100%;
@@ -139,11 +133,19 @@
         font-size: 2.0rem;
         margin-bottom: 40px;
       }
+      @include mq(ssm){
+        font-size: 1.7rem;
+      }
     }
     &__text {
       font-size: 1.5rem;
+      width: 68%;
       @include mq() {
         font-size: 1.1rem;
+        width: 100%;
+      }
+      @include mq(ssm){
+        font-size: 1rem;
       }
     }
   }
@@ -155,13 +157,10 @@
       display: block;
     }
     &__title {
-      padding-top: 40px;
+      padding-top: 50px;
       color: #fff;
       font-size: 3rem;
       text-align: center;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-bottom: 50px;
       @include mq() {
         font-size: 2.3rem;
         padding-bottom: 32px;

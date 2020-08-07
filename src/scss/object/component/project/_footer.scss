@@ -8,5 +8,8 @@
       line-height: unset;
       padding-top: 5%;
     }
+    @include mq(ssm){
+      font-size: 0.9rem;
+    }
   }
 }

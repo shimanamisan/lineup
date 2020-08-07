@@ -4,4 +4,8 @@
   box-sizing: border-box;
   padding-left: 30px;
   padding-right: 30px;
+  @include mq(ssm){
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
