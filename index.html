@@ -40,7 +40,7 @@
     </header>
 
     <main class="l-main">
-      <section class="c-homeContainer p-mainVisual">
+      <section class="c-homeContainer p-mainVisual js-mainVisual">
         <div class="p-mainVisual__body u-row">
           <h2 class="p-mainVisual__title">
             LINEUP BASEBALLCULB
@@ -62,6 +62,7 @@
             <span class="c-subTitle">What's New</span>
           </div>
           <div class="p-news__body">
+
             <ul class="p-news__nav">
               <li class="p-news__item">
                 <span class="p-news__date">2020.05.10</span>
@@ -175,7 +176,7 @@
       <section class="c-homeContainer p-homeCategory__footer">
         <div class="p-homeCategory__footer__wrapp">
           <h2 class="p-homeCategory__footer__title">
-            チームのコンセプトは、『楽しみながら勝つ』
+            チームのコンセプトは、<br/>『楽しみながら勝つ』
           </h2>
           <p class="p-homeCategory__footer__text">
             チームのコンセプトは、『楽しみながら勝つ』という草野球の永遠のテーマを掲げています。<br />
@@ -184,59 +185,60 @@
         </div>
       </section>
 
-      <section class="c-homeContainer p-homeCategory u-hidden">
+      <section class="c-homeContainer p-homeCategory u-hidden u-padding__top--xxl js-youtube">
         <h2 class="p-homeCategory__movie__title">MOVIE NEWS</h2>
-        <div class="p-homeCategory__movie p-youtube__container">
-          <ul
-            class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container"
-            style="width: calc(980px * 4);"
-          >
-            <li class="p-homeCategory__movie__item p-slider__item">
-              <iframe
-                class="p-youtube"
-                src="https://www.youtube.com/embed/n6uQNIvgLco"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </li>
-            <li class="p-homeCategory__movie__item p-slider__item">
-              <iframe
-                class="p-youtube"
-                src="https://www.youtube.com/embed/n6uQNIvgLco"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </li>
-            <li class="p-homeCategory__movie__item p-slider__item">
-              <iframe
-                class="p-youtube"
-                src="https://www.youtube.com/embed/n6uQNIvgLco"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </li>
-            <li class="p-homeCategory__movie__item p-slider__item">
-              <iframe
-                class="p-youtube"
-                src="https://www.youtube.com/embed/n6uQNIvgLco"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </li>
-            <li class="p-homeCategory__movie__item p-slider__item">
-              <iframe
-                class="p-youtube"
-                src="https://www.youtube.com/embed/n6uQNIvgLco"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </li>
-          </ul>
+        <div class="flex-wrapp">
+          <div class="p-homeCategory__movie p-slider__wrapp p-youtube__container">
+            <i class="p-slider p-slider__prev js-slide-prev fas fa-chevron-left"></i>
+            <i class="p-slider p-slider__next js-slide-next fas fa-chevron-right"></i>
+            <ul class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container">
+              <li class="p-homeCategory__movie__item p-slider__item">
+                <iframe
+                  class="p-youtube"
+                  src="//www.youtube.com/embed/n6uQNIvgLco"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="p-homeCategory__movie__item p-slider__item">
+                <iframe
+                  class="p-youtube"
+                  src="//www.youtube.com/embed/lLH7XCjYgpE"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="p-homeCategory__movie__item p-slider__item">
+                <iframe
+                  class="p-youtube"
+                  src="//www.youtube.com/embed/n6uQNIvgLco"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="p-homeCategory__movie__item p-slider__item">
+                <iframe
+                  class="p-youtube"
+                  src="//www.youtube.com/embed/lLH7XCjYgpE"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="p-homeCategory__movie__item p-slider__item">
+                <iframe
+                  class="p-youtube"
+                  src="//www.youtube.com/embed/n6uQNIvgLco"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

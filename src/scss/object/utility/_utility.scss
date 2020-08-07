@@ -16,3 +16,26 @@
     }
   }
 }
+
+.u-padding {
+  &__top{
+    &--s{
+      padding-top: 8px;
+    }
+    &--m{
+      padding-top: 16px;
+    }
+    &--l{
+      padding-top: 24px;
+    }
+    &--xl{
+      padding-top: 32px;
+    }
+    &--xxl{
+      padding-top: 40px;
+    }
+    &--lg{
+      padding-top: 48px;
+    }
+  }
+}

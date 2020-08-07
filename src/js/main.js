@@ -1,8 +1,7 @@
-"use strict";
-
 var $ = require("jquery");
 
 $(function () {
+  "use strict";
   /*******************************************
 ユーザーエージェントよりスマホ端末か判定する
 *********************************************/
@@ -11,15 +10,20 @@ $(function () {
     var phoneActive = /iPhone|iPod|iPad|Android/i.test(
       window.navigator.userAgent
     );
-    var $mainVisual = $('.p-mainVisual') 
+    var $mainVisual = $(".js-mainVisual");
+    var $youtube = $(".js-youtube");
 
     // オブジェクトを返す
     return {
       phoneFlg: function () {
         if (phoneActive) {
+          console.log('ユーザーエージェントを実行')
           $mainVisual.css({
-            height: `${window.outerHeight}`
-          })
+            height: `${window.outerHeight}`,
+          });
+          $youtube.css({
+            height: `${window.outerHeight}`,
+          });
         }
       },
     };
@@ -58,59 +62,58 @@ SPナビメニュー
   /****************************************
 youtube動画自動無限ループ
 *****************************************/
-  var loopSlider = (function () {
+  var slider = (function () {
     // 窓枠となる要素のDOMを取得
     var $sliderContainer = $(".p-slider__container");
+    // レスポンシブに対応させるために、窓枠の幅を取得する（これをli要素の幅にもjs側から適応する）
+    var movieItemWidth = $(".p-youtube__container").innerWidth();
+    // iframe内の動画幅を調節する
+    var $iframe = $(".p-youtube");
+    // // スライドさせる各li要素を取得
+    var $sliderItem = $(".p-slider__item");
     // スライドさせる各li要素のDOMの個数を取得
-    var sliderItemNum = $(".p-slider__item").length;
-    // li要素の幅を取得する
-    var sliderItemWidth = $(".p-slider__item").innerWidth();
-    //
-    var sliderContainerWidth = sliderItemWidth * sliderItemNum;
-    //
-    const DURATION = 10000;
-    //
-    var windowWidth = window.innerWidth;
+    var sliderItemNum = $sliderItem.length;
+
+    var sliderContainerWidth = movieItemWidth * sliderItemNum;
+    // 無限ループさせるために、最後尾に移動した要素分の幅を付け加える
+    var sliderNextObj = {
+      left: "+=" + movieItemWidth + "px",
+    };
+    var DURATION = 500;
 
     // オブジェクトを返す
     return {
-      sliderLoop: function () {
-        // 関数の中からでもthisの参照先を、sliderLoopというオブジェクト自身に指定出来るようにthisを変数に格納
-        var that = this;
+      slideNext: function () {
         $sliderContainer.animate(
-          {
-            left: "-=" + sliderItemWidth + "px",
-          },
+          { left: "-=" + movieItemWidth + "px" },
           DURATION,
-          "linear",
           function () {
-            // append：指定した子要素の最後にHTML要素やテキスト文字を移動させる
-            $sliderContainer.append($("li:first-childe"));
-            $sliderContainer.css({
-              left: "+=" + sliderItemWidth + "px",
-            });
+            $sliderContainer.append($(".p-slider__container li:first-child"));
+            $sliderContainer.css(sliderNextObj);
           }
         );
-        // ループさせる
-        setTimeout(function () {
-          that.sliderLoop();
-        }, 10000);
       },
       init: function () {
-        // if (windowWidth < 400) {
-        //   return false;
-        // }
-        // 関数の中からでもthisの参照先を、initというオブジェクト自身に指定出来るようにthisを変数に格納
-        var that = this;
-        // console.log(that);
-        // スライドさせる大枠の幅を決定する
-        // attrメソッド：指定した要素に属性を追加する（今回はstyle属性をjQuery側から書き込んでいる）
+        // スライドさせる大本の枠を決定している
         $sliderContainer.attr("style", "width: " + sliderContainerWidth + "px");
-        // オブジェクト内の関数を呼び出す
-        that.sliderLoop();
+        // スライドさせる要素の幅を記述する
+        $sliderItem.attr("style", "width: " + movieItemWidth + "px");
+        // スライダーの開始位置をずらす
+        $sliderContainer.css({ left: "-=" + movieItemWidth + "px" });
+        // スライダーの開始位置をずらす
+        $iframe.attr("style", "width: " + movieItemWidth + "px");
+        // ここでthisとすることで、変数のスコープがオブジェクト自身になる
+        var that = this;
+        $(".js-slide-next").on("click", function () {
+          that.slideNext(); //ここでthisとしてしまうと、js-slide-nextを指してしまう
+        });
+        $(".js-slide-prev").on("click", function () {
+          that.slidePrev();
+        });
       },
     };
   })();
   // オブジェクト内のメソッドを実行
-  loopSlider.init();
+  slider.init();
+
 });
