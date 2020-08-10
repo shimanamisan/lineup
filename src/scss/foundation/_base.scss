@@ -53,3 +53,9 @@ br {
     display: block;
   }
 }
+
+table {
+  border-collapse: collapse; // 隣接するボーダーを重ねて表示する
+  font-size: 100%;
+  border-spacing: 0;
+}

@@ -71,7 +71,7 @@ const browserSyncOption = {
   port: 8080,
   server: {
     baseDir: "./", // 対象ディレクトリ
-    index: "index.html", // 対象ファイル
+    index: "rule.html", // 対象ファイル
   },
   reloadOnRestart: true,
 };
