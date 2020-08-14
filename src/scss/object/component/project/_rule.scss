@@ -1,10 +1,10 @@
 .p-rule {
+  padding-top: 80px;
+  padding-bottom: 40px;
   &__header {
     background-color: rgba(0, 0, 0, 0.6);
-    position: static;
   }
   &__table {
-
     width: 100%;
     border: 1px #ccc solid;
     word-break: break-all;
