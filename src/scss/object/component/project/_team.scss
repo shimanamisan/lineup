@@ -1,0 +1,8 @@
+.p-team{
+    &__comp{
+        margin-top: 16px;
+        &:first-child{
+            margin-top: 0px;
+        }
+    }
+}
