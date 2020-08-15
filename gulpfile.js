@@ -8,6 +8,7 @@ const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync");
 const browserify = require("browserify");
 const source = require("vinyl-source-stream"); // gulpで使用するvinylオブジェクトに変換するためのもの
+const gulp_connect = require("gulp-connect-php");
 
 // gulp4系の書き方
 var paths = {
@@ -65,18 +66,33 @@ const img_Build = function (done) {
     .pipe(gulp.dest(dstGlob));
   done();
 };
+// // ローカルサーバの立ち上げの設定
+// const browserSyncOption = {
+//   port: 8080,
+//   server: {
+//     baseDir: "./", // 対象ディレクトリ
+//   },
+//   reloadOnRestart: true,
+// };
 
-// ローカルサーバの立ち上げの設定
-const browserSyncOption = {
-  port: 8080,
-  server: {
-    baseDir: "./", // 対象ディレクトリ
-    index: "rule.html", // 対象ファイル
-  },
-  reloadOnRestart: true,
+const php_serve = function () {
+  gulp_connect.server({
+    base: "./",
+    livereload: true,
+  }, function () {
+    browserSync.init({
+      port: 8080,
+      proxy: "127.0.0.1:8000",
+      // server: {
+      //   baseDir: "./", // 対象ディレクトリ
+      // },
+      // reloadOnRestart: true,
+    });
+  });
 };
+
 const sync = function (done) {
-  browserSync.init(browserSyncOption);
+  php_serve();
 
   gulp.watch(paths.srcDir + "/js/main.js", gulp.series(js_Build));
   gulp.watch(paths.dstDir + "/js/bundle.js").on("change", browserSync.reload);
@@ -86,7 +102,8 @@ const sync = function (done) {
 
   gulp.watch(paths.srcDir + "/img", gulp.series(img_Build));
 
-  gulp.watch("./index.html").on("change", browserSync.reload);
+  gulp.watch("./*.html").on("change", browserSync.reload);
+  gulp.watch("./*.php").on("change", browserSync.reload);
 
   done();
 };
