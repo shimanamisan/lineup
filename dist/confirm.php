@@ -56,7 +56,7 @@ if (!empty($_SESSION)) {
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>LINEUP BASEBALLCULB | 確認画面</title>
   </head>
   <body>
@@ -64,7 +64,7 @@ if (!empty($_SESSION)) {
       <h1 class="p-header__logo">
         <a href="index.html"
           ><img
-            src="./dist/img/LNIEUP.png"
+            src="".//img/LNIEUP.png"
             class="p-header__logo__img js-p-header__logo"
             alt=""
         /></a>
@@ -139,6 +139,6 @@ if (!empty($_SESSION)) {
         Copyright© LINEUP BASEBALLCULB All Rights Reserved.
       </p>
     </footer>
-    <script src="./dist/js/bundle.js"></script>
+    <script src="/js/bundle.js"></script>
   </body>
 </html>

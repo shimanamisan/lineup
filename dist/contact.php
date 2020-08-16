@@ -72,7 +72,7 @@ if (!empty($_POST)) {
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>LINEUP BASEBALLCULB | お問い合わせ</title>
   </head>
   <body>
@@ -80,7 +80,7 @@ if (!empty($_POST)) {
       <h1 class="p-header__logo">
         <a href="index.html"
           ><img
-            src="./dist/img/LNIEUP.png"
+            src="/img/LNIEUP.png"
             class="p-header__logo__img js-p-header__logo"
             alt=""
         /></a>
@@ -202,6 +202,6 @@ if (!empty($_POST)) {
         Copyright© LINEUP BASEBALLCULB All Rights Reserved.
       </p>
     </footer>
-    <script src="./dist/js/bundle.js"></script>
+    <script src="/js/bundle.js"></script>
   </body>
 </html>

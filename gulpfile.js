@@ -77,7 +77,7 @@ const img_Build = function (done) {
 
 const php_serve = function () {
   gulp_connect.server({
-    base: "./",
+    base: "./dist/",
     livereload: true,
   }, function () {
     browserSync.init({
@@ -102,8 +102,8 @@ const sync = function (done) {
 
   gulp.watch(paths.srcDir + "/img", gulp.series(img_Build));
 
-  gulp.watch("./*.html").on("change", browserSync.reload);
-  gulp.watch("./*.php").on("change", browserSync.reload);
+  gulp.watch("./dist/*.html").on("change", browserSync.reload);
+  gulp.watch("./dist/*.php").on("change", browserSync.reload);
 
   done();
 };

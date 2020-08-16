@@ -118,7 +118,7 @@ debug('   ');
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>LINEUP BASEBALLCULB | 送信完了</title>
   </head>
   <body>
@@ -126,7 +126,7 @@ debug('   ');
       <h1 class="p-header__logo">
         <a href="index.html"
           ><img
-            src="./dist/img/LNIEUP.png"
+            src="/img/LNIEUP.png"
             class="p-header__logo__img js-p-header__logo"
             alt=""
         /></a>
@@ -172,6 +172,6 @@ debug('   ');
         Copyright© LINEUP BASEBALLCULB All Rights Reserved.
       </p>
     </footer>
-    <script src="./dist/js/bundle.js"></script>
+    <script src="/js/bundle.js"></script>
   </body>
 </html>
