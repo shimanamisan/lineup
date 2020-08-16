@@ -12,8 +12,10 @@
     "auto-prefixer": "^0.4.2",
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.1",
+    "connect-ssi": "^1.1.1",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
+    "gulp-connect-php": "^1.0.3",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
     "vinyl-source-stream": "^2.0.0"

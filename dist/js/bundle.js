@@ -10882,9 +10882,7 @@ $(function () {
 *********************************************/
   // 即時関数をの返り値を変数に格納（オブジェクトの形で返ってくる）
   var UserAgent = (function () {
-    var phoneActive = /iPhone|iPod|iPad|Android/i.test(
-      window.navigator.userAgent
-    );
+    var phoneActive = /iPhone|iPod|iPad|Android/i.test(window.navigator.userAgent);
     var $mainVisual = $(".js-mainVisual");
     var $youtube = $(".js-youtube");
 
@@ -10892,7 +10890,7 @@ $(function () {
     return {
       phoneFlg: function () {
         if (phoneActive) {
-          console.log('ユーザーエージェントを実行')
+          console.log("ユーザーエージェントを実行");
           $mainVisual.css({
             height: `${window.outerHeight}`,
           });
@@ -10908,13 +10906,29 @@ $(function () {
   UserAgent.phoneFlg();
 
   /****************************************
+フッターをを固定する
+*****************************************/
+let $ftr = $("#footer");
+console.log($ftr.offset());
+console.log($ftr.offset().top);
+console.log($ftr.outerHeight());
+console.log(window.innerHeight);
+if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
+  $ftr.attr({
+    style:
+      "position:fixed; top:" +
+      (window.innerHeight - $ftr.outerHeight()) +
+      "px; width: 100%;",
+  });
+}
+  /****************************************
 スクロールアニメーション
 *****************************************/
   var $jsScrollHeader = $(".js-scroll-trigger");
   var $jsHeaderLogo = $(".js-p-header__logo");
 
   $(window).scroll(() => {
-    if ($(window).scrollTop() >= 300) {
+    if ($(window).scrollTop() >= 250) {
       //   console.log($(window).scrollTop());
       $jsScrollHeader.addClass("c-anime__scroll");
       $jsHeaderLogo.addClass("p-header__scroll");
@@ -10957,16 +10971,13 @@ youtube動画自動無限ループ
     var DURATION = 500;
 
     // オブジェクトを返す
+
     return {
       slideNext: function () {
-        $sliderContainer.animate(
-          { left: "-=" + movieItemWidth + "px" },
-          DURATION,
-          function () {
-            $sliderContainer.append($(".p-slider__container li:first-child"));
-            $sliderContainer.css(sliderNextObj);
-          }
-        );
+        $sliderContainer.animate({ left: "-=" + movieItemWidth + "px" }, DURATION, function () {
+          $sliderContainer.append($(".p-slider__container li:first-child"));
+          $sliderContainer.css(sliderNextObj);
+        });
       },
       init: function () {
         // スライドさせる大本の枠を決定している
@@ -10991,6 +11002,16 @@ youtube動画自動無限ループ
   // オブジェクト内のメソッドを実行
   slider.init();
 
+  /***********************************************
+メール送信後、トップページへリダイレクトさせる処理
+*************************************************/
+  let element = document.querySelectorAll("#js-top-redirect");
+  console.log(element.length)
+  if(element.length !== 0){
+    setTimeout(function(){
+      window.location.href = '/';
+    }, 3000);
+  }
 });
 
 },{"jquery":1}]},{},[2]);

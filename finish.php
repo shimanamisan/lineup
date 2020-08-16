@@ -5,13 +5,67 @@
 *****************************************/
 require('Library/function.php');
 
-debug('メールを送信しました。');
+debug('POSTの中身を確認しています。finish.php：'. print_r($_POST, true));
+debug('   ');
+debug('セッションの中身を確認しています。finish.php：'. print_r($_SESSION, true));
 debug('   ');
 
 if (isset($_POST['top']) && $_POST['top']) {
     header("Location:index.html");
     exit();
 }
+
+if (empty($_SESSION['transition'])) {
+    debug('不正に画面遷移してきました。お問い合わせページへ戻ります。finish.php ');
+    debug('   ');
+    header("Location:contact.php");
+    exit();
+}
+
+if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+    debug('トークンが一致していません。お問い合わせページへ戻ります。finish.php ');
+    debug('   ');
+    $_SESSION = [];
+    header("Location:contact.php");
+}
+
+// セッションのユーザー情報を格納
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$contact = $_SESSION['contact'];
+
+// メール送信処理
+$from = 'team.info@lineupbaseballclub.com';
+$to = $_SESSION['email'];
+$subject = 'お問い合わせ内容を受け付けました。';
+$comment = <<<EOT
+{$name}　様
+
+お問い合わせありがとうございます。
+以下のお問合せ内容を、メールにて確認させて頂きました。
+
+===================================================
+【 お名前 】 
+{$name}
+
+【 メールアドレス 】 
+{$email}
+
+【 お問い合わせ内容 】 
+{$contact}
+===================================================
+
+内容を確認のうえ、回答させて頂きます。
+しばらくお待ちください。
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+　※本メールにご返信いただいてもお答えできませんのでご了承ください。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Copyright (C) LINEUP BASEBALLCULB, All Rights Reserved.
+EOT;
+
+sendMail($from, $to, $subject, $comment);
 
  // セッション変数の中身を空にする
  $_SESSION = [];
@@ -73,11 +127,12 @@ if (isset($_POST['top']) && $_POST['top']) {
           <span class="c-title__sub">- Send Message -</span>
         </h2>
         <form method="post" action="">
-         <div>
-           <p>お問合せ内容を送信しました。</p>
+         <div class="c-form__send">
+           <p class="c-form__send__text">お問合せ内容を送信しました。</p>
+           <p class="c-form__send__text__sub">自動にトップページへ戻らない場合は、トップページへ戻るボタンをクリックしてください。</p>
          </div>
           <div class="c-btn__wrapp">
-            <button class="c-btn" type="submit" name="top" value="top">
+            <button class="c-btn" type="submit" name="top" value="top" id="js-top-redirect">
               トップページへ戻る
             </button>
           </div>

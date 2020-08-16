@@ -1,0 +1,25 @@
+.c-table {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  &__table {
+    width: 100%;
+    border: 1px #ccc solid;
+    word-break: break-all;
+    padding: 10px 15px;
+    & th {
+      width: 165px;
+      text-align: center;
+      font-weight: normal;
+      border: 1px #ccc solid;
+      word-break: break-all;
+      vertical-align: middle;
+      padding: 10px 15px;
+    }
+    & td {
+      font-weight: normal;
+      border: 1px #ccc solid;
+      word-break: break-all;
+      padding: 10px 15px;
+    }
+  }
+}

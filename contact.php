@@ -5,22 +5,53 @@
 *****************************************/
 require('Library/function.php');
 
+getIP();
+
 // POST送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信されている処理です。');
     debug('   ');
+    // POST時の値をフォームに表示させるので、確認画面から戻ってきた場合に
+    // SESSIONの値を表示させているものをクリアする
+    clearSession('name');
+    clearSession('email');
+    clearSession('contact');
 
+    // 変数にフォームの値を格納
     $name = $_POST['name'];
     $email = $_POST['email'];
     $contact = $_POST['contact'];
 
+    // 入力必須
     validRequire($name, 'name');
     validRequire($email, 'email');
     validRequire($contact, 'contact');
 
+    // バリデーションエラーが無い場合
     if (empty($err_msg)) {
-        debug('バリデーションOKの時の処理です。');
+        debug('未入力バリデーションが通った時の処理です。');
         debug('   ');
+
+        // Email形式チェック
+        validEmail($email, 'email');
+
+        // 各フォーム文字数チェック
+        validMaxLen($name, 'name', 50);
+        validMaxLen($email, 'email');
+        validContactMaxLen($contact, 'contact');
+
+        if (empty($err_msg)) {
+            debug('バリデーションOKの時の処理です。');
+            debug('   ');
+    
+            $_SESSION['name'] = $name;
+            $_SESSION['email'] = $email;
+            $_SESSION['contact'] = $contact;
+            $_SESSION['transition'] = true;
+
+            header("Location:confirm.php");
+            exit();
+        }
     }
 }
 
@@ -94,9 +125,7 @@ if (!empty($_POST)) {
                     }
                     ?>"
                     placeholder="お名前"
-                    value="<?php if (!empty($_POST['name'])) {
-                        echo $_POST['name'];
-                    }?>"
+                    value="<?php echo getFormData('name');?>"
                   />
                   <div class="c-error__msg">
                   <?php
@@ -120,9 +149,7 @@ if (!empty($_POST)) {
                         echo 'c-error';
                     } ?>"
                     placeholder="メールアドレス"
-                    value="<?php if (!empty($_POST['email'])) {
-                        echo $_POST['email'];
-                    }?>"
+                    value="<?php echo getFormData('email');?>"
                   />
                   <div class="c-error__msg">
                   <?php
@@ -148,9 +175,7 @@ if (!empty($_POST)) {
                     cols="40"
                     rows="10"
                     placeholder="お問い合わせ内容"
-                  ><?php if (!empty($_POST['contact'])) {
-                        echo $_POST['contact'];
-                    }?></textarea>
+                  ><?php echo getFormData('contact');?></textarea>
                   <div class="c-error__msg c-error__text--contact">
                   <?php
                     if (!empty($err_msg['contact'])) {
@@ -163,14 +188,14 @@ if (!empty($_POST)) {
             </tbody>
           </table>
           <div class="c-btn__wrapp">
-            <button class="c-btn" type="submit">
+            <button class="c-btn" type="submit" name="send">
               内容を確認する
             </button>
           </div>
         </form>
       </section>
     </main>
-    <footer class="l-footer p-footer">
+    <footer id="footer" class="l-footer p-footer">
       <p class="p-footer__text">
         Copyright© LINEUP BASEBALLCULB All Rights Reserved.
       </p>

@@ -1,0 +1,49 @@
+.c-form {
+  &__index {
+    display: inline-block;
+  }
+  &__require {
+    background-color: red;
+    padding: 2px 9px;
+    margin-right: 8px;
+    color: #fff;
+  }
+  &__input {
+    border-radius: 3px;
+    display: block;
+    border: 2px solid #dfd8d8;
+    padding: 10px;
+    font-size: 16px;
+    width: 65%;
+    box-sizing: border-box;
+    &:focus {
+      border: 2px solid #1e73be;
+      outline: none;
+    }
+  }
+  &__textarea {
+    border: 2px solid #dfd8d8;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 65%;
+    box-sizing: border-box;
+    &:focus {
+      border: 2px solid #1e73be;
+      outline: none;
+    }
+  }
+  &__send{
+    margin-bottom: 80px;
+    &__text{
+      display: block;
+      text-align: center;
+      font-size: 2rem;
+     &__sub{
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+     }
+    }
+  }
+}

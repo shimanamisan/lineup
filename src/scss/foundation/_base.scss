@@ -59,3 +59,12 @@ table {
   font-size: 100%;
   border-spacing: 0;
 }
+
+// 親のフォントを継承する
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}

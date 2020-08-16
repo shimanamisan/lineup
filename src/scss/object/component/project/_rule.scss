@@ -4,24 +4,4 @@
   &__header {
     background-color: rgba(0, 0, 0, 0.6);
   }
-  &__table {
-    width: 100%;
-    border: 1px #ccc solid;
-    word-break: break-all;
-    padding: 10px 15px;
-    & th {
-      width: 165px;
-      text-align: center;
-      font-weight: normal;
-      border: 1px #ccc solid;
-      word-break: break-all;
-      padding: 10px 15px;
-    }
-    & td {
-      font-weight: normal;
-      border: 1px #ccc solid;
-      word-break: break-all;
-      padding: 10px 15px;
-    }
-  }
 }

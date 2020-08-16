@@ -19,7 +19,11 @@
 ******************************/
 @import "object/component/homeContainer";
 @import "object/component/title";
+@import "object/component/form";
 @import "object/component/animate";
+@import "object/component/table";
+@import "object/component/btn";
+@import "object/component/error";
 
 /*****************************
  project
@@ -32,6 +36,8 @@
 @import "object/component/project/homeCategory";
 @import "object/component/project/slider";
 @import "object/component/project/rule";
+@import "object/component/project/team";
+@import "object/component/project/contact";
 
 /*****************************
  utility

@@ -5,29 +5,36 @@
 *****************************************/
 require('Library/function.php');
 
-debug('POSTの中身' . print_r($_POST, true));
-debug('   ');
-
-// POST送信で戻る処理だった場合
-// isset($_POST['back'])で'back'というキーが存在しているかを判定し、存在していれば$_POST['back']の値をチェックする
-// $_POST['back']だけだと、POST送信した際にキーが存在していなかった場合にNoticeエラーになる
-if (isset($_POST['back']) && $_POST['back']) {
-    debug('入力画面へ戻ります。confirm.php：'. print_r($_SESSION, true));
+if (empty($_SESSION['transition'])) {
+    debug('不正に画面遷移してきました。お問い合わせページへ戻ります。confirm.php ');
     debug('   ');
     header("Location:contact.php");
     exit();
 }
 
+debug('POSTの中身を確認しています。confirm.php：' . print_r($_POST, true));
+debug('   ');
+
 if (!empty($_SESSION)) {
-    debug('お問いわせ内容がSESSIONに格納されています。');
+    debug('お問いわせ内容がSESSIONに格納されています。confirm.php ');
     debug('   ');
 
     $name = $_SESSION['name'];
     $email = $_SESSION['email'];
     $contact = $_SESSION['contact'];
 
+    // トークンがSESSIONにセットされていなければセットする
+    if (!isset($_SESSION['csrf_token'])) {
+        // CSRF対策用のトークン
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    
+    // isset($_POST['send'])で'send'というキーが存在しているかを判定し、存在していれば$_POST['send']の値をチェックする
+    // $_POST['send']だけだと、POST送信した際にキーが存在していなかった場合にNoticeエラーになる
     if (isset($_POST['send']) && $_POST['send']) {
-        debug('メールを送信する処理です。');
+        debug('isset($_POST[send]) の判定を見ています。confirm.php ' . isset($_POST['send']));
+        debug('   ');
+        debug('メールを送信する処理です。次の画面へ遷移します。confirm.php ' . print_r($_POST, true));
         debug('   ');
         header("Location:finish.php");
         exit();
@@ -85,7 +92,8 @@ if (!empty($_SESSION)) {
 
           <span class="c-title__sub">- Confirm -</span>
         </h2>
-        <form method="post" action="">
+        <form method="post" action="./finish.php">
+          <input type="hidden" name="csrf_token" value="<?php echo sanitize($_SESSION['csrf_token']);?>">
           <table class="c-table c-table__table p-contact__table">
             <tbody>
               <tr>
@@ -116,14 +124,14 @@ if (!empty($_SESSION)) {
             </tbody>
           </table>
           <div class="c-btn__wrapp">
-            <button class="c-btn" type="submit" name="send" value="send">
+            <button class="c-btn c-btn__confirm" type="submit" name="send" value="send">
               送信する
             </button>
-            <button class="c-btn" type="submit" name="back" value="back">
-              内容を修正する
-            </button>
+            <input class="c-btn c-btn__confirm__back" type="button" value="内容を修正する" onclick="history.back(-1)">
           </div>
         </form>
+       
+        
       </section>
     </main>
     <footer id="footer" class="l-footer p-footer">
