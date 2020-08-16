@@ -39,6 +39,14 @@
   }
   &__item {
     margin-right: $space_xxl;
+    & > a {
+      transition: 0.3s;
+      &:hover {
+        color: #7f7f7f;
+        transition: 0.3s;
+      }
+    }
+
     @include mq() {
       padding: 15px;
       font-size: 30px;

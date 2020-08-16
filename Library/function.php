@@ -52,6 +52,7 @@ define('MSG02', 'Emailの形式で入力してください。');
 define('MSG03', '50文字以内で入力してください。');
 define('MSG04', '100文字以内で入力してください。');
 define('MSG05', '500文字以内で入力してください。');
+define('MSG06', '全角で入力してください。');
 
 
 // エラーメッセージ格納用の配列
@@ -102,6 +103,14 @@ function validContactMaxLen($str, $key, $max = 500)
         $err_msg[$key] = MSG05;
     }
 }
+// 全角チェック（お問い合わせ内容用）
+function validNameText($str, $key)
+{
+    if (!preg_match("/^[ぁ-んァ-ヶー一-龠]+$/u", $str)) {
+        global $err_msg;
+        $err_msg[$key] = MSG06;
+    }
+}
 
 /****************************************
  メール送信
@@ -114,12 +123,29 @@ function sendMail($from, $to, $subject, $comment)
         mb_internal_encoding("UTF-8"); // 内部の日本語をどうエンコーディング（機械が分かる言葉へ変換）するかを設定
         
         // メールを送信（送信結果はtrueかfalseで返ってくる）
-        $result = mb_send_mail($to, $subject, $comment, "From: ".$from);
+        $result = mb_send_mail($to, $subject, $comment, "From: ". $from);
         // 送信結果を判定
         if ($result) {
-            debug('メールを送信しました。');
+            debug('メールを送信しました。sendMailメソッド');
         } else {
-            debug('【エラー発生】メールの送信に失敗しました。');
+            debug('【エラー発生】メールの送信に失敗しました。sendMailメソッド');
+        }
+    }
+}
+function sendMailAdmin($to, $subject, $comment)
+{
+    if (!empty($to) && !empty($subject) && !empty($comment)) {
+        // 文字化けしないように設定
+        mb_language("Japanese"); // 現在使っている言語を設定する
+        mb_internal_encoding("UTF-8"); // 内部の日本語をどうエンコーディング（機械が分かる言葉へ変換）するかを設定
+        
+        // メールを送信（送信結果はtrueかfalseで返ってくる）
+        $result = mb_send_mail($to, $subject, $comment);
+        // 送信結果を判定
+        if ($result) {
+            debug('メールを送信しました。sendMailAdminメソッド');
+        } else {
+            debug('【エラー発生】メールの送信に失敗しました。sendMailAdminメソッド');
         }
     }
 }

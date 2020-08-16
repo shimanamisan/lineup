@@ -1,0 +1,897 @@
+[16-Aug-2020 13:51:56 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 13:51:56 Asia/Tokyo]    
+[16-Aug-2020 13:51:56 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 13:51:56 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => カラム
+    [email] => mikan.sup.all@gmail.com
+    [contact] => メンバー募集してますか？
+
+
+ｓｄｆｓｄ
+    [transition] => 1
+)
+
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:24 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 13:52:24 Asia/Tokyo]    
+[16-Aug-2020 13:52:32 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => カラム
+    [email] => mikan.sup.all@gmail.com
+    [contact] => メンバー募集してますか？
+
+
+ｓｄｆｓｄ
+    [transition] => 1
+    [csrf_token] => c67fbbf81007710ed714d29579a0647576465ee76a18a188ec1083c0dccfd741
+)
+
+[16-Aug-2020 13:52:32 Asia/Tokyo]    
+[16-Aug-2020 13:52:32 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => c67fbbf81007710ed714d29579a0647576465ee76a18a188ec1083c0dccfd741
+    [send] => send
+)
+
+[16-Aug-2020 13:52:32 Asia/Tokyo]    
+[16-Aug-2020 13:52:32 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => カラム
+    [email] => mikan.sup.all@gmail.com
+    [contact] => メンバー募集してますか？
+
+
+ｓｄｆｓｄ
+    [transition] => 1
+    [csrf_token] => c67fbbf81007710ed714d29579a0647576465ee76a18a188ec1083c0dccfd741
+)
+
+[16-Aug-2020 13:52:32 Asia/Tokyo]    
+[16-Aug-2020 13:52:34 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 13:52:35 Asia/Tokyo] メールを送信しました。sendMailAdminメソッド
+[16-Aug-2020 13:52:35 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 13:52:35 Asia/Tokyo]    
+[16-Aug-2020 13:58:48 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 13:58:48 Asia/Tokyo]    
+[16-Aug-2020 13:58:48 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 13:58:48 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:58:58 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 13:58:58 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => 
+    [email] => 
+    [contact] => 
+)
+
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => ごんごん
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｆだｓ
+
+あｓｄふぁｓ
+    [transition] => 1
+)
+
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:03 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 13:59:03 Asia/Tokyo]    
+[16-Aug-2020 13:59:05 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => ごんごん
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｆだｓ
+
+あｓｄふぁｓ
+    [transition] => 1
+    [csrf_token] => afb141673bc7c94a3f1fc245e760a184f5adb29622cb46ceb6805ac80058cfad
+)
+
+[16-Aug-2020 13:59:05 Asia/Tokyo]    
+[16-Aug-2020 13:59:05 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => afb141673bc7c94a3f1fc245e760a184f5adb29622cb46ceb6805ac80058cfad
+    [send] => send
+)
+
+[16-Aug-2020 13:59:05 Asia/Tokyo]    
+[16-Aug-2020 13:59:05 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => ごんごん
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｆだｓ
+
+あｓｄふぁｓ
+    [transition] => 1
+    [csrf_token] => afb141673bc7c94a3f1fc245e760a184f5adb29622cb46ceb6805ac80058cfad
+)
+
+[16-Aug-2020 13:59:05 Asia/Tokyo]    
+[16-Aug-2020 13:59:07 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 13:59:09 Asia/Tokyo] メールを送信しました。sendMailAdminメソッド
+[16-Aug-2020 13:59:09 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 13:59:09 Asia/Tokyo]    
+[16-Aug-2020 14:00:27 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 14:00:27 Asia/Tokyo]    
+[16-Aug-2020 14:00:27 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 14:00:27 Asia/Tokyo]    
+[16-Aug-2020 16:47:40 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 16:47:40 Asia/Tokyo]    
+[16-Aug-2020 16:47:40 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 16:47:40 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+)
+
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:50 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 16:47:50 Asia/Tokyo]    
+[16-Aug-2020 16:47:53 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+)
+
+[16-Aug-2020 16:47:53 Asia/Tokyo]    
+[16-Aug-2020 16:47:53 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 16:47:53 Asia/Tokyo]    
+[16-Aug-2020 16:47:56 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+)
+
+[16-Aug-2020 16:47:56 Asia/Tokyo]    
+[16-Aug-2020 16:47:56 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 16:47:56 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+)
+
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+)
+
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:47:57 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 16:47:57 Asia/Tokyo]    
+[16-Aug-2020 16:48:03 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+)
+
+[16-Aug-2020 16:48:03 Asia/Tokyo]    
+[16-Aug-2020 16:48:03 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+    [send] => send
+)
+
+[16-Aug-2020 16:48:03 Asia/Tokyo]    
+[16-Aug-2020 16:48:03 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => さふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => f23cb8aa5d0a06d54204f3e630c00af2e65c566a8fa27265e4d7deb98d4f7ece
+)
+
+[16-Aug-2020 16:48:03 Asia/Tokyo]    
+[16-Aug-2020 16:48:06 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 16:48:07 Asia/Tokyo] メールを送信しました。sendMailAdminメソッド
+[16-Aug-2020 16:48:07 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 16:48:07 Asia/Tokyo]    
+[16-Aug-2020 16:49:13 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 16:49:13 Asia/Tokyo]    
+[16-Aug-2020 16:49:13 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 16:49:13 Asia/Tokyo]    
+[16-Aug-2020 17:01:31 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 17:01:31 Asia/Tokyo]    
+[16-Aug-2020 17:01:31 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:01:31 Asia/Tokyo]    
+[16-Aug-2020 17:01:32 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 17:01:32 Asia/Tokyo]    
+[16-Aug-2020 17:01:32 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:01:32 Asia/Tokyo]    
+[16-Aug-2020 17:12:18 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 17:12:18 Asia/Tokyo]    
+[16-Aug-2020 17:12:18 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:12:18 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => あふぁ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄふぁｓｆｄ
+    [transition] => 1
+)
+
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:25 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 17:12:25 Asia/Tokyo]    
+[16-Aug-2020 17:12:26 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => あふぁ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => 1db675457fde3687a4a34e67384d72907e95e6dee053fa0f9f700d827c6c6bc8
+)
+
+[16-Aug-2020 17:12:26 Asia/Tokyo]    
+[16-Aug-2020 17:12:26 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => 1db675457fde3687a4a34e67384d72907e95e6dee053fa0f9f700d827c6c6bc8
+    [send] => send
+)
+
+[16-Aug-2020 17:12:26 Asia/Tokyo]    
+[16-Aug-2020 17:12:26 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => あふぁ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => 1db675457fde3687a4a34e67384d72907e95e6dee053fa0f9f700d827c6c6bc8
+)
+
+[16-Aug-2020 17:12:26 Asia/Tokyo]    
+[16-Aug-2020 17:12:28 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 17:12:28 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 17:12:28 Asia/Tokyo]    
+[16-Aug-2020 17:13:37 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 17:13:37 Asia/Tokyo]    
+[16-Aug-2020 17:13:37 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:13:37 Asia/Tokyo]    
+[16-Aug-2020 17:13:41 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 17:13:41 Asia/Tokyo]    
+[16-Aug-2020 17:13:41 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:13:41 Asia/Tokyo]    
+[16-Aug-2020 17:13:41 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 17:13:41 Asia/Tokyo]    
+[16-Aug-2020 17:13:41 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:13:41 Asia/Tokyo]    
+[16-Aug-2020 17:13:41 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:13:41 Asia/Tokyo]    
+[16-Aug-2020 17:13:41 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:13:41 Asia/Tokyo]    
+[16-Aug-2020 17:14:04 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => 
+    [email] => 
+    [contact] => 
+)
+
+[16-Aug-2020 17:14:04 Asia/Tokyo]    
+[16-Aug-2020 17:14:04 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:14:04 Asia/Tokyo]    
+[16-Aug-2020 17:14:10 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => 
+    [email] => 
+    [contact] => 
+)
+
+[16-Aug-2020 17:14:10 Asia/Tokyo]    
+[16-Aug-2020 17:14:10 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 17:14:10 Asia/Tokyo]    
+[16-Aug-2020 17:14:10 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 17:14:10 Asia/Tokyo]    
+[16-Aug-2020 17:14:10 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:14:10 Asia/Tokyo]    
+[16-Aug-2020 17:14:10 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:14:10 Asia/Tokyo]    
+[16-Aug-2020 17:14:10 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 17:14:10 Asia/Tokyo]    
+[16-Aug-2020 21:08:59 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => 
+    [email] => 
+    [contact] => 
+)
+
+[16-Aug-2020 21:08:59 Asia/Tokyo]    
+[16-Aug-2020 21:08:59 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:08:59 Asia/Tokyo]    
+[16-Aug-2020 21:09:01 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => 
+    [email] => 
+    [contact] => 
+)
+
+[16-Aug-2020 21:09:01 Asia/Tokyo]    
+[16-Aug-2020 21:09:01 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:09:01 Asia/Tokyo]    
+[16-Aug-2020 21:09:01 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 21:09:01 Asia/Tokyo]    
+[16-Aug-2020 21:09:01 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:09:01 Asia/Tokyo]    
+[16-Aug-2020 21:09:01 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:09:01 Asia/Tokyo]    
+[16-Aug-2020 21:09:01 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:09:01 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => 
+    [email] => 
+    [contact] => 
+)
+
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => みかん
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄｆさｄｆ
+    [transition] => 1
+)
+
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:07 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 21:09:07 Asia/Tokyo]    
+[16-Aug-2020 21:09:09 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => みかん
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄｆさｄｆ
+    [transition] => 1
+    [csrf_token] => 4c7c8f7bcc9dab4b9853cead8855da20b2e83fd2415a76c99c4a0ab32dbf7daf
+)
+
+[16-Aug-2020 21:09:09 Asia/Tokyo]    
+[16-Aug-2020 21:09:09 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => 4c7c8f7bcc9dab4b9853cead8855da20b2e83fd2415a76c99c4a0ab32dbf7daf
+    [send] => send
+)
+
+[16-Aug-2020 21:09:09 Asia/Tokyo]    
+[16-Aug-2020 21:09:09 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => みかん
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄｆさｄｆ
+    [transition] => 1
+    [csrf_token] => 4c7c8f7bcc9dab4b9853cead8855da20b2e83fd2415a76c99c4a0ab32dbf7daf
+)
+
+[16-Aug-2020 21:09:09 Asia/Tokyo]    
+[16-Aug-2020 21:09:11 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 21:09:11 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 21:09:11 Asia/Tokyo]    
+[16-Aug-2020 21:17:44 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:17:44 Asia/Tokyo]    
+[16-Aug-2020 21:17:44 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:17:44 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:51 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 21:17:51 Asia/Tokyo]    
+[16-Aug-2020 21:17:52 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => ｄｓｇｄｓｆｇｆ
+    [transition] => 1
+)
+
+[16-Aug-2020 21:17:52 Asia/Tokyo]    
+[16-Aug-2020 21:17:52 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 21:17:52 Asia/Tokyo]    
+[16-Aug-2020 21:17:52 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 21:17:52 Asia/Tokyo]    
+[16-Aug-2020 21:17:53 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => ｄｓｇｄｓｆｇｆ
+    [transition] => 1
+    [csrf_token] => 4d6b2d5fc5dd5f4ab9bf7691113541c0ae2d0c490b92d007711791f6b4dd2a17
+)
+
+[16-Aug-2020 21:17:53 Asia/Tokyo]    
+[16-Aug-2020 21:17:53 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => 4d6b2d5fc5dd5f4ab9bf7691113541c0ae2d0c490b92d007711791f6b4dd2a17
+    [send] => send
+)
+
+[16-Aug-2020 21:17:53 Asia/Tokyo]    
+[16-Aug-2020 21:17:53 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => おなまえ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => ｄｓｇｄｓｆｇｆ
+    [transition] => 1
+    [csrf_token] => 4d6b2d5fc5dd5f4ab9bf7691113541c0ae2d0c490b92d007711791f6b4dd2a17
+)
+
+[16-Aug-2020 21:17:53 Asia/Tokyo]    
+[16-Aug-2020 21:17:55 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 21:17:55 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 21:17:55 Asia/Tokyo]    
+[16-Aug-2020 21:17:57 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:17:57 Asia/Tokyo]    
+[16-Aug-2020 21:17:57 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [top] => top
+)
+
+[16-Aug-2020 21:17:57 Asia/Tokyo]    
+[16-Aug-2020 21:17:57 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+)
+
+[16-Aug-2020 21:17:57 Asia/Tokyo]    
+[16-Aug-2020 21:32:49 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:32:49 Asia/Tokyo]    
+[16-Aug-2020 21:32:49 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:32:49 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => あああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => ｓふぁｓｆｄ
+    [transition] => 1
+)
+
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:58 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 21:32:58 Asia/Tokyo]    
+[16-Aug-2020 21:32:59 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => あああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => ｓふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => 9ba48688b22f9e73a1a5b59ef22a517b6c593ee880698818895fdc51604f3b02
+)
+
+[16-Aug-2020 21:32:59 Asia/Tokyo]    
+[16-Aug-2020 21:32:59 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => 9ba48688b22f9e73a1a5b59ef22a517b6c593ee880698818895fdc51604f3b02
+    [send] => send
+)
+
+[16-Aug-2020 21:32:59 Asia/Tokyo]    
+[16-Aug-2020 21:32:59 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => あああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => ｓふぁｓｆｄ
+    [transition] => 1
+    [csrf_token] => 9ba48688b22f9e73a1a5b59ef22a517b6c593ee880698818895fdc51604f3b02
+)
+
+[16-Aug-2020 21:32:59 Asia/Tokyo]    
+[16-Aug-2020 21:33:02 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 21:33:02 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 21:33:02 Asia/Tokyo]    
+[16-Aug-2020 21:35:50 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:35:50 Asia/Tokyo]    
+[16-Aug-2020 21:35:50 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:35:50 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => ああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｆさｄｆ
+    [transition] => 1
+)
+
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:56 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 21:35:56 Asia/Tokyo]    
+[16-Aug-2020 21:35:58 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => ああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｆさｄｆ
+    [transition] => 1
+    [csrf_token] => 3f9f7b9d86bbb61e3f157b2a4c7dc99e1633d66d9fadad2f6ef28e76238c5ef3
+)
+
+[16-Aug-2020 21:35:58 Asia/Tokyo]    
+[16-Aug-2020 21:35:58 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => 3f9f7b9d86bbb61e3f157b2a4c7dc99e1633d66d9fadad2f6ef28e76238c5ef3
+    [send] => send
+)
+
+[16-Aug-2020 21:35:58 Asia/Tokyo]    
+[16-Aug-2020 21:35:58 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => ああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｆさｄｆ
+    [transition] => 1
+    [csrf_token] => 3f9f7b9d86bbb61e3f157b2a4c7dc99e1633d66d9fadad2f6ef28e76238c5ef3
+)
+
+[16-Aug-2020 21:35:58 Asia/Tokyo]    
+[16-Aug-2020 21:35:59 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 21:35:59 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 21:35:59 Asia/Tokyo]    
+[16-Aug-2020 21:37:05 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:37:05 Asia/Tokyo]    
+[16-Aug-2020 21:37:05 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:37:05 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+)
+
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] ユーザーのIPアドレスを取得しています。127.0.0.1
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] POST送信されている処理です。
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] SESSIONの値を空にしています。clearSessionメソッド
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] 未入力バリデーションが通った時の処理です。
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] バリデーションOKの時の処理です。
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => あああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄふぁｓｆ
+    [transition] => 1
+)
+
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] POSTの中身を確認しています。confirm.php：Array
+(
+)
+
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:14 Asia/Tokyo] お問いわせ内容がSESSIONに格納されています。confirm.php 
+[16-Aug-2020 21:37:14 Asia/Tokyo]    
+[16-Aug-2020 21:37:15 Asia/Tokyo] セッションの中身を確認。function.php：Array
+(
+    [name] => あああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄふぁｓｆ
+    [transition] => 1
+    [csrf_token] => 57bb65275327827757f58d30455c12c370171c5c51d733f4fbdac8b87dbfdaea
+)
+
+[16-Aug-2020 21:37:15 Asia/Tokyo]    
+[16-Aug-2020 21:37:15 Asia/Tokyo] POSTの中身を確認しています。finish.php：Array
+(
+    [csrf_token] => 57bb65275327827757f58d30455c12c370171c5c51d733f4fbdac8b87dbfdaea
+    [send] => send
+)
+
+[16-Aug-2020 21:37:15 Asia/Tokyo]    
+[16-Aug-2020 21:37:15 Asia/Tokyo] セッションの中身を確認しています。finish.php：Array
+(
+    [name] => あああああ
+    [email] => mikan.sup.all@gmail.com
+    [contact] => あｓｄふぁｓｆ
+    [transition] => 1
+    [csrf_token] => 57bb65275327827757f58d30455c12c370171c5c51d733f4fbdac8b87dbfdaea
+)
+
+[16-Aug-2020 21:37:15 Asia/Tokyo]    
+[16-Aug-2020 21:37:16 Asia/Tokyo] メールを送信しました。sendMailメソッド
+[16-Aug-2020 21:37:18 Asia/Tokyo] メールを送信しました。sendMailAdminメソッド
+[16-Aug-2020 21:37:18 Asia/Tokyo] メールを送信したので、セッションを削除しました。finish.php：Array
+(
+)
+
+[16-Aug-2020 21:37:18 Asia/Tokyo]    

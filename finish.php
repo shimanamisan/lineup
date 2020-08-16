@@ -34,7 +34,9 @@ $name = $_SESSION['name'];
 $email = $_SESSION['email'];
 $contact = $_SESSION['contact'];
 
-// メール送信処理
+/****************************************
+ 問い合わせユーザーへ返信する内容
+*****************************************/
 $from = 'team.info@lineupbaseballclub.com';
 $to = $_SESSION['email'];
 $subject = 'お問い合わせ内容を受け付けました。';
@@ -55,7 +57,7 @@ $comment = <<<EOT
 {$contact}
 ===================================================
 
-内容を確認のうえ、回答させて頂きます。
+内容を確認の上、回答させて頂きます。
 しばらくお待ちください。
 
 
@@ -65,15 +67,41 @@ $comment = <<<EOT
 Copyright (C) LINEUP BASEBALLCULB, All Rights Reserved.
 EOT;
 
+/****************************************
+ 管理者へ通知する内容
+*****************************************/
+$toAdmin = 'team.info@lineupbaseballclub.com';
+$subjectAdmin = 'メッセージを受信しました｜lineupbaseballclub.com';
+$commentAdmin = <<<EOT
+
+ウェブサイトより下記のお問い合わせが有りました。
+
+===================================================
+【 お名前 】 
+{$name}
+
+【 メールアドレス 】 
+{$email}
+
+【 お問い合わせ内容 】 
+{$contact}
+===================================================
+
+ユーザーへ返信してください。
+EOT;
+
+// 問い合わせたユーザーへ送信
 sendMail($from, $to, $subject, $comment);
 
- // セッション変数の中身を空にする
- $_SESSION = [];
- // セッションを削除
- session_destroy();
- debug('メールを送信したので、セッションを削除しました。finish.php：'. print_r($_SESSION, true));
- debug('   ');
+// 管理者へ送信
+sendMailAdmin($toAdmin, $subjectAdmin, $commentAdmin);
 
+// セッション変数の中身を空にする
+$_SESSION = [];
+// セッションを削除
+session_destroy();
+debug('メールを送信したので、セッションを削除しました。finish.php：'. print_r($_SESSION, true));
+debug('   ');
 
 ?>
 

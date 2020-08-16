@@ -34,6 +34,8 @@ if (!empty($_POST)) {
 
         // Email形式チェック
         validEmail($email, 'email');
+        // 名前が全角かチェック
+        validNameText($name, 'name');
 
         // 各フォーム文字数チェック
         validMaxLen($name, 'name', 50);
