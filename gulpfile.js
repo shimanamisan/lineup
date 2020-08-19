@@ -66,29 +66,21 @@ const img_Build = function (done) {
     .pipe(gulp.dest(dstGlob));
   done();
 };
-// // ローカルサーバの立ち上げの設定
-// const browserSyncOption = {
-//   port: 8080,
-//   server: {
-//     baseDir: "./", // 対象ディレクトリ
-//   },
-//   reloadOnRestart: true,
-// };
 
 const php_serve = function () {
-  gulp_connect.server({
-    base: "./dist/",
-    livereload: true,
-  }, function () {
-    browserSync.init({
-      port: 8080,
-      proxy: "127.0.0.1:8000",
-      // server: {
-      //   baseDir: "./", // 対象ディレクトリ
-      // },
-      // reloadOnRestart: true,
-    });
-  });
+  gulp_connect.server(
+    {
+      base: "./dist/",
+      livereload: true,
+      port: 8001,
+    },
+    function () {
+      browserSync.init({
+        proxy: "localhost:8001",
+        open: "external",
+      });
+    }
+  );
 };
 
 const sync = function (done) {
