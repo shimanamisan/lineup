@@ -15,7 +15,15 @@ if (empty($_SESSION['transition'])) {
 debug('POSTの中身を確認しています。confirm.php：' . print_r($_POST, true));
 debug('   ');
 
-if (!empty($_SESSION)) {
+if (isset($_POST['back']) && $_POST['back']) {
+    debug('前のページへ戻る処理です。confirm.php ');
+    debug('   ');
+    header("Location:contact.php");
+    exit();
+}
+
+// セッションに値が入っていたら処理を行う
+if (isset($_SESSION)) {
     debug('お問いわせ内容がSESSIONに格納されています。confirm.php ');
     debug('   ');
 
@@ -39,51 +47,24 @@ if (!empty($_SESSION)) {
         header("Location:finish.php");
         exit();
     }
+} else {
+    debug('セッションが空だったので前のページへ戻ります。。confirm.php ');
+    debug('   ');
+    header("Location:contact.php");
+    exit();
 }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>LINEUP BASEBALLCULB | 確認画面</title>
-  </head>
-  <body>
-    <header class="l-header js-scroll-trigger p-rule__header">
-      <h1 class="p-header__logo">
-        <a href="index.html"
-          ><img
-            src="".//img/LNIEUP.png"
-            class="p-header__logo__img js-p-header__logo"
-            alt=""
-        /></a>
-      </h1>
-      <div id="js-spmenu-trigger" class="p-header__spmenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="js-nav-trigger" class="p-header p-header__nav">
-        <ul class="p-header__list">
-          <li class="p-header__item"><a href="team.html">チーム紹介</a></li>
-          <li class="p-header__item"><a href="rule.html">チーム規則</a></li>
-          <li class="p-header__item"><a href="">スケジュール</a></li>
-          <li class="p-header__item"><a href="">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </header>
+<?php
+$siteTitle = 'お問い合わせ内容確認';
+// メタタグなど読み込み
+require('head.php');
 
+// bodyタグからheaderを読み込み
+require('header.php');
+
+?>
 
     <main class="l-main__contact u-inner">
       <section class="c-table">
@@ -127,18 +108,20 @@ if (!empty($_SESSION)) {
             <button class="c-btn c-btn__confirm" type="submit" name="send" value="send">
               送信する
             </button>
-            <input class="c-btn c-btn__confirm__back" type="button" value="内容を修正する" onclick="history.back(-1)">
+            </form>
+            <form method="post" action="">
+                <button class="c-btn c-btn__confirm__back" type="submit" name="back" value="send">
+                内容を修正する
+                </button>
+            </form>
           </div>
-        </form>
+       
        
         
       </section>
     </main>
-    <footer id="footer" class="l-footer p-footer">
-      <p class="p-footer__text">
-        Copyright© LINEUP BASEBALLCULB All Rights Reserved.
-      </p>
-    </footer>
-    <script src="/js/bundle.js"></script>
-  </body>
-</html>
+    
+    <?php
+// フッターを読み込み
+require("footer.php");
+?>

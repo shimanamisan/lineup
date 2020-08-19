@@ -1,4 +1,9 @@
 /*****************************
+ fontawesome
+******************************/
+@import "./fontawesome/scss/fontawesome.scss";
+
+/*****************************
  foundation
 ******************************/
 @import "foundation/reset";
@@ -24,6 +29,7 @@
 @import "object/component/table";
 @import "object/component/btn";
 @import "object/component/error";
+@import "object/component/loading";
 
 /*****************************
  project
@@ -38,6 +44,7 @@
 @import "object/component/project/rule";
 @import "object/component/project/team";
 @import "object/component/project/contact";
+@import "object/component/project/social";
 
 /*****************************
  utility

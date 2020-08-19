@@ -105,46 +105,15 @@ debug('   ');
 
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>LINEUP BASEBALLCULB | 送信完了</title>
-  </head>
-  <body>
-    <header class="l-header js-scroll-trigger p-rule__header">
-      <h1 class="p-header__logo">
-        <a href="index.html"
-          ><img
-            src="/img/LNIEUP.png"
-            class="p-header__logo__img js-p-header__logo"
-            alt=""
-        /></a>
-      </h1>
-      <div id="js-spmenu-trigger" class="p-header__spmenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="js-nav-trigger" class="p-header p-header__nav">
-        <ul class="p-header__list">
-          <li class="p-header__item"><a href="team.html">チーム紹介</a></li>
-          <li class="p-header__item"><a href="rule.html">チーム規則</a></li>
-          <li class="p-header__item"><a href="">スケジュール</a></li>
-          <li class="p-header__item"><a href="">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </header>
+<?php
+$siteTitle = '送信完了';
+// メタタグなど読み込み
+require('head.php');
+
+// bodyタグからheaderを読み込み
+require('header.php');
+
+?>
 
 
     <main class="l-main__contact u-inner">
@@ -167,11 +136,8 @@ debug('   ');
         </form>
       </section>
     </main>
-    <footer id="footer" class="l-footer p-footer">
-      <p class="p-footer__text">
-        Copyright© LINEUP BASEBALLCULB All Rights Reserved.
-      </p>
-    </footer>
-    <script src="/js/bundle.js"></script>
-  </body>
-</html>
+
+    <?php
+// フッターを読み込み
+require("footer.php");
+?>
