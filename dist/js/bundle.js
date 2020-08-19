@@ -10907,10 +10907,16 @@ $(function () {
   /****************************************
 ローディングアニメーションに制御
 *****************************************/
-  let $jsLoader = $("#js-loader");
+  let $jsLoading = $(".js-loading");
+  let $jsLoadingModule = $(".js-loading-module");
+  let $jsLoadingContent = $(".js-loading-content");
   // 読み込みが完了したら、コールバックの処理を実行する
   $(window).on("load", function () {
-    $jsLoader.toggleClass('c-loading__open')
+    $jsLoadingModule.fadeOut("slow");
+    $jsLoadingContent.css({ display: "block" });
+    setTimeout(() => {
+      $jsLoading.toggleClass("c-loading__open");
+    }, 1000);
   });
 
   /****************************************
