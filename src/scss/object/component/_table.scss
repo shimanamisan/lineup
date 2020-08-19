@@ -14,12 +14,21 @@
       word-break: break-all;
       vertical-align: middle;
       padding: 10px 15px;
+      background-color: #f7f7f7;
+      @include mq(){
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
     & td {
       font-weight: normal;
       border: 1px #ccc solid;
       word-break: break-all;
       padding: 10px 15px;
+      @include mq(){
+        display: block;
+      }
     }
   }
 }

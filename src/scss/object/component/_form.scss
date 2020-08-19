@@ -20,6 +20,10 @@
       border: 2px solid #1e73be;
       outline: none;
     }
+    @include mq() {
+      width: 100%;
+      box-sizing: border-box;
+    }
   }
   &__textarea {
     border: 2px solid #dfd8d8;
@@ -32,18 +36,22 @@
       border: 2px solid #1e73be;
       outline: none;
     }
+    @include mq() {
+      width: 100%;
+      box-sizing: border-box;
+    }
   }
-  &__send{
+  &__send {
     margin-bottom: 80px;
-    &__text{
+    &__text {
       display: block;
       text-align: center;
       font-size: 2rem;
-     &__sub{
-      display: block;
-      text-align: center;
-      font-size: 0.9rem;
-     }
+      &__sub {
+        display: block;
+        text-align: center;
+        font-size: 0.9rem;
+      }
     }
   }
 }
