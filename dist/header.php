@@ -13,7 +13,7 @@
           <li class="p-header__item"><a href="team.php">チーム紹介</a></li>
           <li class="p-header__item"><a href="rule.php">チーム規則</a></li>
           <li class="p-header__item"><a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener">スケジュール</a></li>
-          <li class="p-header__item"><a href="">メンバー募集</a></li>
+          <li class="p-header__item"><a href="member.php">メンバー募集</a></li>
           <li class="p-header__item"><a href="contact.php">お問い合わせ</a></li>
         </ul>
       </nav>

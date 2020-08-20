@@ -16,11 +16,13 @@ $(function () {
       phoneFlg: function () {
         if (phoneActive) {
           console.log("ユーザーエージェントを実行");
+          console.log("window.outerHeightを見ています ：" + window.outerHeight );
+          console.log("innerHeightを見ています ：" + window.innerHeight );
           $mainVisual.css({
-            height: `${window.outerHeight}`,
+            height: `${window.innerHeight}`,
           });
           $youtube.css({
-            height: `${window.outerHeight}`,
+            height: `${window.innerHeight}`,
           });
         }
       },
@@ -39,19 +41,17 @@ $(function () {
   $(window).on("load", function () {
     $jsLoadingModule.fadeOut("slow");
     $jsLoadingContent.css({ display: "block" });
-    setTimeout(() => {
-      $jsLoading.toggleClass("c-loading__open");
-    }, 1000);
+    $jsLoading.toggleClass("c-loading__open");
   });
 
   /****************************************
 フッターをを固定する
 *****************************************/
   let $ftr = $("#footer");
-  console.log($ftr.offset());
-  console.log($ftr.offset().top);
-  console.log($ftr.outerHeight());
-  console.log(window.innerHeight);
+  // console.log($ftr.offset());
+  // console.log($ftr.offset().top);
+  // console.log($ftr.outerHeight());
+  // console.log(window.innerHeight);
   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
     $ftr.attr({
       style: "position:fixed; top:" + (window.innerHeight - $ftr.outerHeight()) + "px; width: 100%;",
@@ -157,7 +157,7 @@ youtube動画自動無限ループ
 メール送信後、トップページへリダイレクトさせる処理
 *************************************************/
   let element = document.querySelectorAll("#js-top-redirect");
-  console.log(element.length);
+  // console.log(element.length);
   if (element.length !== 0) {
     setTimeout(function () {
       window.location.href = "/";

@@ -7,6 +7,17 @@ require('Library/function.php');
 
 getIP();
 
+// ページ宣言
+$mode = 'contact';
+
+if (isset($_SESSION['mode']) && $_SESSION['mode'] !== $mode) {
+    $_SESSION = []; // セッションをする前に空にする
+    session_destroy(); // この時点ではセッションは削除されない
+    debug('メンバー募集ページから遷移してきました。セッションの値を削除します。contact.php' . print_r($_SESSION, true));
+    debug('   ');
+}
+
+
 // POST送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信されている処理です。');
@@ -50,6 +61,7 @@ if (!empty($_POST)) {
             $_SESSION['email'] = $email;
             $_SESSION['contact'] = $contact;
             $_SESSION['transition'] = true;
+            $_SESSION['mode'] = $mode;
 
             header("Location:confirm.php");
             exit();

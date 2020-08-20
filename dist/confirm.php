@@ -18,8 +18,28 @@ debug('   ');
 if (isset($_POST['back']) && $_POST['back']) {
     debug('前のページへ戻る処理です。confirm.php ');
     debug('   ');
-    header("Location:contact.php");
-    exit();
+    switch (true) {
+      case $_SESSION['mode'] === 'member':
+        debug('メンバー募集のページへ戻ります。confirm.php ');
+        debug('   ');
+        unset($_SESSION['csrf_token']);
+        header("Location:member.php");
+        exit();
+    break;
+      case $_SESSION['mode'] === 'contact':
+        debug('お問い合わせページへ戻ります。confirm.php ');
+        debug('   ');
+        unset($_SESSION['csrf_token']);
+        header("Location:contact.php");
+        exit();
+    break;
+      default:
+        debug('エラーが発生しました。トップページへ戻ります。confirm.php ');
+        debug('   ');
+        unset($_SESSION['csrf_token']);
+        header("Location:index.php");
+        exit();
+    }
 }
 
 // セッションに値が入っていたら処理を行う
@@ -110,7 +130,7 @@ require('header.php');
             </button>
             </form>
             <form method="post" action="">
-                <button class="c-btn c-btn__confirm__back" type="submit" name="back" value="send">
+                <button class="c-btn c-btn__confirm__back" type="submit" name="back" value="back">
                 内容を修正する
                 </button>
             </form>

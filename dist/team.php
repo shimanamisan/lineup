@@ -13,7 +13,7 @@ require('header.php');
         <h2 class="c-title">
           チーム紹介
 
-          <span class="c-title__sub">Team</span>
+          <span class="c-title__sub">- Team -</span>
         </h2>
         <table class="c-table c-table__table">
           <tbody>

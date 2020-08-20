@@ -33,8 +33,8 @@ require('header.php');
           </ul>
         </div>
         <video class="p-mainVisual__movie" loop autoplay muted playsinline>
-          <source src="movie/top-video.webm" />
           <source src="movie/top-video.mp4" />
+          <source src="movie/top-video.webm" />
         </video>
 
         <div class="p-mainVisual__cover"></div>
@@ -95,7 +95,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel01">
-              <a href="team.html"></a>
+              <a href="team.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">チーム紹介</p>
               </div>
@@ -105,7 +105,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel02">
-              <a href="rule.html"></a>
+              <a href="rule.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">チーム規則</p>
               </div>
@@ -115,7 +115,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel03">
-              <a href="#"></a>
+              <a href="https://teams.one/teams/lineupbaseballclub/player" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">選手名鑑</p>
               </div>
@@ -125,7 +125,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel04">
-              <a href="#"></a>
+              <a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">スケジュール</p>
               </div>
@@ -135,7 +135,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel05">
-              <a href="#"></a>
+              <a href="https://teams.one/teams/lineupbaseballclub/game" target="_brank" rel="noopener">
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">成績表</p>
               </div>
