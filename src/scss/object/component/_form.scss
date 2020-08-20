@@ -41,6 +41,35 @@
       box-sizing: border-box;
     }
   }
+  &__selectbox {
+    // フォームに設定されているデフォルトスタイルを削除（今回はセレクトボックスのみ適応）
+    // https://www.nxworld.net/tips/15-useful-css-snippets-in-form-style.html
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%; // c-form__input に設定されている width:65%; を上書き
+    &__wrapp {
+      width: 65%;
+      color: #707070;
+      position: relative;
+      @include mq() {
+        width: 100%;
+      }
+    }
+    &__icon {
+      position: absolute;
+      top: 17px;
+      right: 4%;
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #333;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 7px solid transparent;
+      content: "";
+    }
+  }
   &__send {
     margin-bottom: 80px;
     &__text {
