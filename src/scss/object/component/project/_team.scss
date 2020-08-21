@@ -1,4 +1,10 @@
 .p-team {
+  &__link {
+    color: #707070;
+    &:hover {
+      font-weight: bold;
+    }
+  }
   &__comp {
     margin-top: 16px;
     &:first-child {

@@ -4,4 +4,10 @@
   &__header {
     background-color: rgba(0, 0, 0, 0.6);
   }
+  &__comp {
+    margin-top: 8px;
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
 }
