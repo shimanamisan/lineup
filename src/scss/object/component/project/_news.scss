@@ -20,6 +20,7 @@
     @include custumRadius(5px);
     padding: 16px 24px;
     background-color: $color-default;
+    min-height: 250px;
     @include mq() {
       padding: 8px;
       font-size: 14px;
@@ -37,12 +38,10 @@
       padding: 8px;
     }
   }
-
   &__item {
     margin-bottom: $space_s;
     display: flex;
   }
-
   &__date {
     font-weight: bold;
     margin-right: 10px;

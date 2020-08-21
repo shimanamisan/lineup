@@ -48,44 +48,12 @@ require('header.php');
           <div class="p-news__body">
             <ul class="p-news__nav">
               <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">新メンバーが加入しました。</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
+                <span class="p-news__date">2020.08.21</span>
                 <span class="p-news__itemTitle">試合結果を更新しました。</span>
               </li>
               <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
-              </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.05.10</span>
-                <span class="p-news__itemTitle">お知らせ</span>
+                <span class="p-news__date">2020.08.20</span>
+                <span class="p-news__itemTitle">ホームページをリニューアルしました。</span>
               </li>
             </ul>
           </div>
@@ -135,7 +103,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel05">
-              <a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener"></a>
+              <a href="https://teams.one/teams/lineupbaseballclub/stats" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">成績表</p>
               </div>
