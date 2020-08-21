@@ -110,9 +110,6 @@ require('header.php');
           <span class="c-title__sub">- Member -</span>
         </h2>
 
-        <h3>
-          募集詳細
-        </h3>
           <table class="c-table c-table__table">
           <tbody>
             <tr>
@@ -316,7 +313,7 @@ require('header.php');
                     " name="position" id="">
                       <option value="">選択してください</option>
                       <?php foreach ($selectBox as $key => $val):?>
-                        <option value="<?php echo $key ?>" <?php if ($key === getFormData($key)) {
+                        <option value="<?php echo $val ?>" <?php if ($key === getFormData($key)) {
                         echo 'selected' ;
                     }?>><?php echo $val?></option>
                       <?php endforeach;?>

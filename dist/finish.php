@@ -11,7 +11,7 @@ debug('セッションの中身を確認しています。finish.php：'. print_
 debug('   ');
 
 if (isset($_POST['top']) && $_POST['top']) {
-    header("Location:index.html");
+    header("Location:index.php");
     exit();
 }
 
@@ -26,21 +26,90 @@ if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
     debug('トークンが一致していません。お問い合わせページへ戻ります。finish.php ');
     debug('   ');
     $_SESSION = [];
+    session_destroy();
     header("Location:contact.php");
 }
 
 // セッションのユーザー情報を格納
-$name = $_SESSION['name'];
-$email = $_SESSION['email'];
-$contact = $_SESSION['contact'];
-
-/****************************************
- 問い合わせユーザーへ返信する内容
+if ($_SESSION['mode'] === 'member') {
+    /****************************************
+ メンバー募集から遷移してきた時の処理
 *****************************************/
-$from = 'team.info@lineupbaseballclub.com';
-$to = $_SESSION['email'];
-$subject = 'お問い合わせ内容を受け付けました。';
-$comment = <<<EOT
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $position = $_SESSION['position'];
+    $contact = $_SESSION['contact'];
+
+    $from = 'team.info@lineupbaseballclub.com';
+    $to = $email;
+    $subject = 'お問い合わせ内容を受け付けました。';
+    $comment = <<<EOT
+{$name}　様
+
+お問い合わせありがとうございます。
+以下のお問合せ内容を、メールにて確認させて頂きました。
+
+===================================================
+【 お名前 】 
+{$name}
+
+【 メールアドレス 】 
+{$email}
+
+【 希望ポジシヨン 】 
+{$position}
+
+【 その他 】 
+{$contact}
+===================================================
+
+内容を確認の上、回答させて頂きます。
+しばらくお待ちください。
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+　※本メールにご返信いただいてもお答えできませんのでご了承ください。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Copyright (C) LINEUP BASEBALLCULB, All Rights Reserved.
+EOT;
+
+    /****************************************
+     管理者へ通知する内容
+    *****************************************/
+    $toAdmin = 'team.info@lineupbaseballclub.com';
+    $subjectAdmin = 'メッセージを受信しました｜lineupbaseballclub.com';
+    $commentAdmin = <<<EOT
+
+ウェブサイトより下記のお問い合わせが有りました。
+
+===================================================
+【 お名前 】 
+{$name}
+
+【 メールアドレス 】 
+{$email}
+
+【 希望ポジシヨン 】 
+{$position}
+
+【 その他 】 
+{$contact}
+===================================================
+
+ユーザーへ返信してください。
+EOT;
+} elseif ($_SESSION['mode'] === 'contact') {
+    /****************************************
+ お問い合わせページから遷移して来た時の処理
+*****************************************/
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $contact = $_SESSION['contact'];
+
+    $from = 'team.info@lineupbaseballclub.com';
+    $to = $_SESSION['email'];
+    $subject = 'お問い合わせ内容を受け付けました。';
+    $comment = <<<EOT
 {$name}　様
 
 お問い合わせありがとうございます。
@@ -67,12 +136,12 @@ $comment = <<<EOT
 Copyright (C) LINEUP BASEBALLCULB, All Rights Reserved.
 EOT;
 
-/****************************************
- 管理者へ通知する内容
-*****************************************/
-$toAdmin = 'team.info@lineupbaseballclub.com';
-$subjectAdmin = 'メッセージを受信しました｜lineupbaseballclub.com';
-$commentAdmin = <<<EOT
+    /****************************************
+     管理者へ通知する内容
+    *****************************************/
+    $toAdmin = 'team.info@lineupbaseballclub.com';
+    $subjectAdmin = 'メッセージを受信しました｜lineupbaseballclub.com';
+    $commentAdmin = <<<EOT
 
 ウェブサイトより下記のお問い合わせが有りました。
 
@@ -89,6 +158,8 @@ $commentAdmin = <<<EOT
 
 ユーザーへ返信してください。
 EOT;
+}
+
 
 // 問い合わせたユーザーへ送信
 sendMail($from, $to, $subject, $comment);

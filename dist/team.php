@@ -6,6 +6,11 @@ require('head.php');
 // bodyタグからheaderを読み込み
 require('header.php');
 
+// URL読み込み
+$river = "";
+$GBN = "";
+$SKYCUP = "";
+
 ?>
 
     <main class="l-main__rule u-inner">
@@ -41,7 +46,13 @@ require('header.php');
               </th>
               <td>
                 <p>
-                  GBN、SKY CUP、リバーサイドリーグ
+                  <a class="p-team__link" href="https://www.gbn-sports.com/cgi-bin/prof/tprof.cgi?tid=3304" target="_brank" rel="noopener">GBN</a>
+                </p>
+                <p>
+                  <a class="p-team__link" href="https://major.skycup.jp/" target="_brank" rel="noopener">SKY CUP</a>
+                </p>
+                <p>
+                  <a class="p-team__link" href="http://www.rsl.jp/" target="_brank" rel="noopener">リバーサイドリーグ</a>
                 </p>
               </td>
             </tr>
@@ -51,7 +62,7 @@ require('header.php');
               </th>
               <td>
                 <ul>
-                  <li class="p-team__comp">
+                  <li   >
                     【2014年】
                   </li>
                   <li>
@@ -92,6 +103,15 @@ require('header.php');
                   </li>
                   <li class="p-team__comp">
                     【2018年】
+                  </li>
+                  <li>
+                    ★★更新中★★
+                  </li>
+                  <li>
+                    ★★更新中★★
+                  </li>
+                  <li class="p-team__comp">
+                    【2019年】
                   </li>
                   <li>
                     ★★更新中★★

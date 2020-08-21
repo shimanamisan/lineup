@@ -44,12 +44,27 @@ if (isset($_POST['back']) && $_POST['back']) {
 
 // セッションに値が入っていたら処理を行う
 if (isset($_SESSION)) {
-    debug('お問いわせ内容がSESSIONに格納されています。confirm.php ');
+    debug('お問いわせ内容がSESSIONに格納されています。confirm.php ' . print_r($_SESSION, true));
     debug('   ');
 
-    $name = $_SESSION['name'];
-    $email = $_SESSION['email'];
-    $contact = $_SESSION['contact'];
+    if ($_SESSION['mode'] === 'member') {
+        // セッションの値を配列に格納
+        $confirm_content = [
+        'お名前' => $_SESSION['name'],
+        'メールアドレス' => $_SESSION['email'],
+        '希望ポジション' => $_SESSION['position'],
+        'その他' => $_SESSION['contact']
+      ];
+    } elseif ($_SESSION['mode'] === 'contact') {
+        // セッションの値を配列に格納
+        $confirm_content = [
+          'お名前' => $_SESSION['name'],
+          'メールアドレス' => $_SESSION['email'],
+          'お問い合わせ内容' => $_SESSION['contact']
+        ];
+    }
+
+   
 
     // トークンがSESSIONにセットされていなければセットする
     if (!isset($_SESSION['csrf_token'])) {
@@ -97,31 +112,16 @@ require('header.php');
           <input type="hidden" name="csrf_token" value="<?php echo sanitize($_SESSION['csrf_token']);?>">
           <table class="c-table c-table__table p-contact__table">
             <tbody>
-              <tr>
-                <th>
-        
-                  <p class="c-form__index">お名前</p>
-                </th>
-                <td>
-                 <p><?php echo sanitize($name); ?></p>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <p class="c-form__index">メールアドレス</p>
-                </th>
-                <td>
-                  <p><?php echo sanitize($email); ?></p>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <p class="c-form__index">お問い合わせ内容</p>
-                </th>
-                <td>
-                  <p><?php echo sanitize($contact); ?></p>
-                </td>
-              </tr>
+              <?php foreach ($confirm_content as $key => $val) : ?>
+                <tr>
+                  <th>
+                    <p class="c-form__index"><?php echo sanitize($key); ?></p>
+                  </th>
+                  <td>
+                  <p><?php echo sanitize($val); ?></p>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
           <div class="c-btn__wrapp">

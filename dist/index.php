@@ -135,7 +135,7 @@ require('header.php');
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img p-homeCategory__img--panel05">
-              <a href="https://teams.one/teams/lineupbaseballclub/game" target="_brank" rel="noopener">
+              <a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">成績表</p>
               </div>
