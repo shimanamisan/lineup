@@ -5,4 +5,10 @@
         margin-bottom: 24px;
         text-align: center;
     }
+    &__text{
+        margin-top: 12px;
+        &:first-child {
+            margin-top: 0px;
+          }
+    }
 }

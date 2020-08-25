@@ -23,7 +23,7 @@ require('header.php');
           <h2 class="p-mainVisual__title">
             LINEUP BASEBALLCULB
           </h2>
-          <span class="p-mainVisual__text">LINEUPは、土曜日活動チームとして大阪市内で活動している結成12年目のチームです</span>
+          <span class="p-mainVisual__text">LINEUPは、土曜日活動チームとして大阪市内で活動している結成15年目のチームです</span>
           <ul class="p-social">
             <li class="p-social__item p-social__title">Follow Us</li>
             <li class="p-social__item p-social__icon"><a href="https://twitter.com/LINEUP_2020">Twitter</a></li>
