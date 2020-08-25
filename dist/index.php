@@ -26,10 +26,10 @@ require('header.php');
           <span class="p-mainVisual__text">LINEUPは、土曜日活動チームとして大阪市内で活動している結成12年目のチームです</span>
           <ul class="p-social">
             <li class="p-social__item p-social__title">Follow Us</li>
-            <li class="p-social__item p-social__icon"><a href="">Twitter</a></li>
-            <li class="p-social__item p-social__icon"><a href="https://www.instagram.com/wada.kenichi_lineup10/" target="_brank" rel="noopener">Instagram</a></li>
-            <span class="p-social__fab"><i class="fab fa-twitter"></i></span>
-            <span class="p-social__fab"><a href="https://www.instagram.com/wada.kenichi_lineup10/" target="_brank" rel="noopener"><i class="fab fa-instagram"></i></a></span>
+            <li class="p-social__item p-social__icon"><a href="https://twitter.com/LINEUP_2020">Twitter</a></li>
+            <li class="p-social__item p-social__icon"><a href="https://www.instagram.com/wada.kenichi_lineup10" target="_brank" rel="noopener">Instagram</a></li>
+            <span class="p-social__fab"><a href="https://twitter.com/LINEUP_2020" target="_brank" rel="noopener"><i class="fab fa-twitter"></a></i></span>
+            <span class="p-social__fab"><a href="https://www.instagram.com/wada.kenichi_lineup10" target="_brank" rel="noopener"><i class="fab fa-instagram"></i></a></span>
           </ul>
         </div>
         <video class="p-mainVisual__movie" loop autoplay muted playsinline>
