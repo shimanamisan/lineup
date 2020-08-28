@@ -7,6 +7,9 @@
     padding: 200px 20px 250px;
     width: 980px;
     box-sizing: border-box;
+    @include mq(md){
+      width: 100%;
+    }
     @include mq() {
       width: 100%;
       padding: 150px 5px 140px;

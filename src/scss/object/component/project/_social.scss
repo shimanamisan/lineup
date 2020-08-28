@@ -4,10 +4,14 @@
     margin-top: 25%;
     font-size: 1.5rem;
   }
+  @include mq(md) {
+    margin-top: 25%;
+    font-size: 1.8rem;
+  }
   &__item {
     display: inline-block;
     padding-left: 8px;
-    @include mq() {
+    @include mq(md) {
       padding-right: 24px;
     }
     & > a {
@@ -33,19 +37,22 @@
       margin-top: 8%;
       margin-left: 0.7rem;
       float: right;
+      @include mq(md) {
+        display: none;
+      }
       @include mq() {
         display: none;
       }
     }
   }
   &__icon {
-    @include mq() {
+    @include mq(md) {
       display: none;
     }
   }
   &__fab {
     display: none;
-    @include mq() {
+    @include mq(md) {
       display: inline-block;
       padding: 5px;
       & > a {
