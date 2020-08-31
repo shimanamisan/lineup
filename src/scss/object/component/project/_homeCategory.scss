@@ -127,6 +127,9 @@
         padding-left: 16px;
         padding-right: 16px;
       }
+      @include mq(md) {
+        left: 47%;
+      }
     }
     &__title {
       font-size: 3rem;
@@ -146,6 +149,9 @@
       @include mq() {
         font-size: 1.1rem;
         width: 100%;
+      }
+      @include mq(md) {
+        width: 90%;
       }
       @include mq(ssm){
         font-size: 1rem;
