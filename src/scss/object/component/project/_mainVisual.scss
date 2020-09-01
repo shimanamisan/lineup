@@ -59,9 +59,11 @@
     min-width: 100vw;
     min-height: 100vh;
     z-index: -99;
+    @include mq(md) {
+      margin-left: -500px;
+    }
     @include mq() {
       margin-left: -410px;
-      // bottom: unset;
     }
   }
 
