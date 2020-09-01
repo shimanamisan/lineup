@@ -13,7 +13,7 @@
     width: 980px;
     margin: 0 auto;
     position: relative;
-    @include mq(){
+    @include mq(md){
       width: 100%;
     }
   }
@@ -40,6 +40,9 @@
   &__prev {
     left: -6%;
     padding: 24px;
+    @include mq(md) {
+      left: -2%;
+    }
     @include mq() {
       top: 105%;
     }
@@ -47,6 +50,9 @@
   &__next {
     right: -6%;
     padding: 24px;
+    @include mq(md) {
+      right: -2%;
+    }
     @include mq() {
       top: 105%;
     }
