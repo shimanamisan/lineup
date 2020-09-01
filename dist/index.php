@@ -6,6 +6,12 @@ require('head.php');
 // bodyタグからheaderを読み込み
 require('header.php');
 
+$top_news = [
+  '2020.08.30' => '試合結果を更新しました。',
+  '2020.08.21' => '試合結果を更新しました。',
+  '2020.08.20' => 'ホームページをリニューアルしました。',
+];
+
 ?>
 
     <main class="l-main">
@@ -47,14 +53,12 @@ require('header.php');
           </h2>
           <div class="p-news__body">
             <ul class="p-news__nav">
+            <?php foreach ($top_news as $key => $value): ?>
               <li class="p-news__item">
-                <span class="p-news__date">2020.08.21</span>
-                <span class="p-news__itemTitle">試合結果を更新しました。</span>
+                <span class="p-news__date"><?php echo sanitize($key);?></span>
+                <span class="p-news__itemTitle"><?php echo sanitize($value);?></span>
               </li>
-              <li class="p-news__item">
-                <span class="p-news__date">2020.08.20</span>
-                <span class="p-news__itemTitle">ホームページをリニューアルしました。</span>
-              </li>
+            <?php endforeach;?>
             </ul>
           </div>
         </div>
