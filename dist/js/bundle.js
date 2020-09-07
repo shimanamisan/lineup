@@ -10994,6 +10994,7 @@ youtube動画自動無限ループ
       slideNext: function () {
         $sliderContainer.animate({ left: "-=" + movieItemWidth + "px" }, DURATION, function () {
           // アニメーション完了時、先頭の要素を最後尾に移動する
+        
           $sliderContainer.append($(".p-slider__container li:first-child"));
           $sliderContainer.css(sliderNextObj);
         });
