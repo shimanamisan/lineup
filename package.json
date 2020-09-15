@@ -11,7 +11,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
-    "auto-prefixer": "^0.4.2",
+    "autoprefixer": "^9.8.6",
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.2",
@@ -35,5 +35,12 @@
   },
   "dependencies": {
     "jquery": "^3.5.1"
-  }
+  },
+  "browserslist": [
+    "last 4 versions",
+    "ie 9",
+    "ie 10",
+    "android >= 4",
+    "ios_saf >=8"
+  ]
 }

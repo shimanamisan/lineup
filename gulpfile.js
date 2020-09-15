@@ -10,6 +10,7 @@ const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
 const postcss = require("gulp-postcss"); // PostCSS利用
+const autoprefixer = require('autoprefixer'); // 自動でベンダープレフィックスを記述する
 const sourcemaps = require("gulp-sourcemaps"); // ソースマップ作成
 const uglify = require("gulp-uglify"); // jsファイルを圧縮する
 const rename = require("gulp-rename"); // ファイル名を変更するプラグインを追加
@@ -64,14 +65,7 @@ const sass_Build = function (done) {
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     // {outputStyle: 'compressed'}はgulp-sassのオプションで出力ファイルを圧縮している
     // https://www.npmjs.com/package/gulp-sass
-    .pipe(
-      postcss([
-        require("autoprefixer")({
-          grid: "autoplace",
-          cascade: false,
-        }),
-      ])
-    )
+    .pipe(postcss([autoprefixer()]))
     .pipe(
       plumber(
         //エラーが出ても処理を止めない
