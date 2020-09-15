@@ -3,14 +3,23 @@ const gulp = require("gulp");
 // gulp-minify-cssが非推奨になり、gulp-clean-cssを使用するようアナウンスが出ている
 // https://www.npmjs.com/package/gulp-minify-css
 const sass = require("gulp-sass");
+const sassGlob = require("gulp-sass-glob"); // 複数のimport文をまとめる
 const changed = require("gulp-changed");
 const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync");
+const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
+const notify = require("gulp-notify"); // エラー発生時のアラート出力
+const postcss = require("gulp-postcss"); // PostCSS利用
+const sourcemaps = require("gulp-sourcemaps"); // ソースマップ作成
+const uglify = require("gulp-uglify"); // jsファイルを圧縮する
+const rename = require("gulp-rename"); // ファイル名を変更するプラグインを追加
 const browserify = require("browserify");
-const source = require("vinyl-source-stream"); // gulpで使用するvinylオブジェクトに変換するためのもの
+const babelify = require("babelify"); // babelify は Browserify 用の Babel 変換ライブラリ
+const source = require("vinyl-source-stream"); // gulpで使用するvinylオブジェクトに変換するためのもの。Browserify を扱う際に利用する
 const gulp_connect = require("gulp-connect-php");
+const streamify = require("gulp-streamify"); // gulpでストリームモードを利用できるようにする
 
-// gulp4系の書き方
+// ファイルパスを予め設定
 var paths = {
   srcDir: "src",
   dstDir: "dist",
@@ -20,9 +29,29 @@ var paths = {
 const js_Build = function (done) {
   browserify({
     entries: [paths.srcDir + "/js/main.js"],
+    debug: true,
   })
+    .transform(babelify, { presets: ["@babel/preset-env"] })
     .bundle()
-    .pipe(source("bundle.js")) // sourceメソッドの引数にソースとなるファイル名を渡すことでvinylに変換されたオブジェクトが返ってくる
+    .on("error", function (e) {
+      console.log(e);
+    })
+    .pipe(source("bundle.js")) // 引数に出力後のファイル名を記述
+    .pipe(
+      plumber(
+        //エラーが出ても処理を止めない
+        {
+          errorHandler: notify.onError("Error: <%= error.message %>"),
+        }
+      )
+    )
+    .pipe(streamify(uglify())) // streamifyを使用していないと、GulpUglifyError: Streaming not supported とエラーが出る
+    .pipe(sourcemaps.write("./"))
+    .pipe(
+      rename({
+        extname: ".min.js", // 圧縮後は min が追記されたファイル名になる
+      })
+    )
     .pipe(gulp.dest(paths.dstDir + "/js/"));
   done();
 };
@@ -31,19 +60,38 @@ const js_Build = function (done) {
 const sass_Build = function (done) {
   gulp
     .src(paths.srcDir + "/scss/**/*.scss")
+    .pipe(sassGlob())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     // {outputStyle: 'compressed'}はgulp-sassのオプションで出力ファイルを圧縮している
     // https://www.npmjs.com/package/gulp-sass
-    // .pipe(
-    //   autoprefixer(["last 3 versions", "ie >= 8", "Android >= 4", "iOS >= 8"])
-    // )
+    .pipe(
+      postcss([
+        require("autoprefixer")({
+          grid: "autoplace",
+          cascade: false,
+        }),
+      ])
+    )
+    .pipe(
+      plumber(
+        //エラーが出ても処理を止めない
+        {
+          errorHandler: notify.onError("Error:<%= error.message %>"),
+          //エラー出力設定
+        }
+      )
+    )
+    .pipe(
+      rename({
+        extname: ".min.css", //.min.cssの拡張子にする
+      })
+    )
     .pipe(gulp.dest(paths.dstDir + "/css/"));
   done();
 };
 
 //画像圧縮
 //圧縮前と圧縮後のディレクトリを定義
-
 // jpg, png, gif画像の圧縮タスク
 // gulp-imageminのバージョンアップによるでるエラー：imagemin.jpegtran is not a function
 // imagemin.jpegtran()をimagemin.mozjpeg()に変更
@@ -81,24 +129,21 @@ const php_serve = function () {
       });
     }
   );
-};
 
-const sync = function (done) {
-  php_serve();
-
-  gulp.watch(paths.srcDir + "/js/main.js", gulp.series(js_Build));
-  gulp.watch(paths.dstDir + "/js/bundle.js").on("change", browserSync.reload);
-
+  // 監視するタスク
+  gulp.watch(paths.srcDir + "/js/*.js", gulp.series(js_Build));
   gulp.watch(paths.srcDir + "/scss/**/*.scss", gulp.series(sass_Build));
-  gulp.watch(paths.dstDir + "/css/style.css").on("change", browserSync.reload);
-
   gulp.watch(paths.srcDir + "/img", gulp.series(img_Build));
+
+  // ファイルが更新（ビルド）されたらリロードする
+  gulp.watch(paths.dstDir + "/js/*.js").on("change", browserSync.reload);
+  gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
 
   gulp.watch("./dist/*.html").on("change", browserSync.reload);
   gulp.watch("./dist/*.php").on("change", browserSync.reload);
-
-  done();
 };
 
-// 定義したタスクを使えるように出力 gulp [タスク名] でコマンドを叩くと使える
-exports.default = sync;
+// gulp コマンドで下記のタスクが実行される
+exports.default = php_serve;
+// gulp buildコマンドで実行される（初回ビルド時）
+exports.build = gulp.parallel(js_Build, sass_Build, img_Build);

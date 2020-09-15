@@ -4,18 +4,22 @@
   outline: none;
   border-radius: 3px;
   padding: 15px 20px;
-
+  transition: all 0.8s;
   background-color: #0a0b37;
   color: #fff;
+  &:hover {
+    background-color: #84859b;
+    transition: all 0.8s;
+  }
   &__confirm {
     margin-right: 32px;
-    &__back{
-        background-color: #84859b;
-        transition: all .8s;
-        &:hover{
-            background-color: #0a0b37;
-            transition: all .8s;
-        }
+    &__back {
+      background-color: #84859b;
+      transition: all 0.8s;
+      &:hover {
+        background-color: #0a0b37;
+        transition: all 0.8s;
+      }
     }
   }
   &__wrapp {

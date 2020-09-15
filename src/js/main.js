@@ -130,6 +130,7 @@ youtube動画自動無限ループ
           $sliderContainer.prepend($(".p-slider__container li:last-child"));
           $sliderContainer.css(sliderPrevObj);
         });
+        
       },
       init: function () {
         // スライドさせる大本の枠を決定している

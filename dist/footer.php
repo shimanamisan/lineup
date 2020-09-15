@@ -3,6 +3,6 @@
       Copyright© LINEUP BASEBALLCULB All Rights Reserved.
     </p>
   </footer>
-  <script src="js/bundle.js"></script>
+  <script src="js/bundle.min.js"></script>
 </body>
 </html>
