@@ -16,8 +16,8 @@ $(function () {
       phoneFlg: function () {
         if (phoneActive) {
           console.log("ユーザーエージェントを実行");
-          console.log("window.outerHeightを見ています ：" + window.outerHeight );
-          console.log("innerHeightを見ています ：" + window.innerHeight );
+          console.log("window.outerHeightを見ています ：" + window.outerHeight);
+          console.log("innerHeightを見ています ：" + window.innerHeight);
           $mainVisual.css({
             height: `${window.innerHeight}`,
           });
@@ -34,12 +34,17 @@ $(function () {
   /****************************************
 ローディングアニメーションに制御
 *****************************************/
+  let $jsBody = $("body");
   let $jsLoading = $(".js-loading");
   let $jsLoadingModule = $(".js-loading-module");
   let $jsLoadingContent = $(".js-loading-content");
   // 読み込みが完了したら、コールバックの処理を実行する
   $(window).on("load", function () {
-    $jsLoadingModule.fadeOut("slow");
+    $jsLoadingModule.fadeOut("slow", function () {
+      setTimeout(() => {
+        $jsBody.css("overflow", "");
+      }, 2000);
+    });
     $jsLoadingContent.css({ display: "block" });
     $jsLoading.toggleClass("c-loading__open");
   });
@@ -119,7 +124,7 @@ youtube動画自動無限ループ
       slideNext: function () {
         $sliderContainer.animate({ left: "-=" + movieItemWidth + "px" }, DURATION, function () {
           // アニメーション完了時、先頭の要素を最後尾に移動する
-        
+
           $sliderContainer.append($(".p-slider__container li:first-child"));
           $sliderContainer.css(sliderNextObj);
         });
@@ -130,7 +135,6 @@ youtube動画自動無限ループ
           $sliderContainer.prepend($(".p-slider__container li:last-child"));
           $sliderContainer.css(sliderPrevObj);
         });
-        
       },
       init: function () {
         // スライドさせる大本の枠を決定している

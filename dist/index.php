@@ -22,16 +22,7 @@ $top_news = [
 
 ?>
 
-    <main class="l-main">
-    <div class="c-loading js-loading">
-      <div class="c-loading__module js-loading-module">
-        <p class="c-loading__module__text">Loading...</p>
-      </div>
-      <div class="c-loading__content js-loading-content">
-        <p class="">野球しようよ！！</p>
-      </div>
-    </div>
-
+    <main class="l-main js-main-show" style="overflow: hidden;">
       <section class="c-homeContainer p-mainVisual js-mainVisual">
         <div class="p-mainVisual__body u-row">
           <h2 class="p-mainVisual__title">
