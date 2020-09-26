@@ -18,11 +18,4 @@
         </ul>
       </nav>
     </header>
-    <div class="c-loading js-loading">
-      <div class="c-loading__module js-loading-module">
-        <p class="c-loading__module__text">Loading...</p>
-      </div>
-      <div class="c-loading__content js-loading-content">
-        <p class="">野球しようよ！！</p>
-      </div>
-    </div>
+  

@@ -1,4 +1,5 @@
-let $ = require("jquery");
+import $ from "jquery"
+import Cookie from "jquery.cookie"
 
 $(function () {
   "use strict";
@@ -40,13 +41,19 @@ $(function () {
   let $jsLoadingContent = $(".js-loading-content");
   // 読み込みが完了したら、コールバックの処理を実行する
   $(window).on("load", function () {
-    $jsLoadingModule.fadeOut("slow", function () {
-      setTimeout(() => {
-        $jsBody.css("overflow", "");
-      }, 2000);
-    });
-    $jsLoadingContent.css({ display: "block" });
-    $jsLoading.toggleClass("c-loading__open");
+    if($.cookie("access") == undefined ){
+      console.log('初回アクセス時')
+      $jsLoadingModule.fadeOut("slow", function () {
+        setTimeout(() => {
+          $jsBody.css("overflow", "");
+        }, 2000);
+      });
+      $jsLoadingContent.css("display", "block");
+      $jsLoading.toggleClass("c-loading__open");
+    }else{
+      $jsLoadingModule.css("display", "none")
+      console.log('2回目以降')
+    }
   });
 
   /****************************************
