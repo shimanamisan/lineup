@@ -23,7 +23,7 @@ $top_news = [
 ?>
 
     <main class="l-main js-main-show">
-    <div class="c-loading js-loading">
+    <div class="c-loading js-loading" style="display: none;">
       <div class="c-loading__module js-loading-module">
         <p class="c-loading__module__text">Loading...</p>
       </div>

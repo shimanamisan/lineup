@@ -1,8 +1,43 @@
-import $ from "jquery"
-import Cookie from "jquery.cookie"
+import $ from "jquery";
 
 $(function () {
   "use strict";
+
+  // Cookie読み出し用の関数
+  function getCookie(key) {
+    // Cookieから値を取得する
+    let cookieString = document.cookie;
+    // 要素ごとに ; で区切られているので、 ; で切り出しを行う。新しく配列として生成
+    // ここでは前後にスペースが入っている
+    let cookieKeyArray = cookieString.split(";");
+
+    // 要素分ループを行う
+    for (let i = 0; i < cookieKeyArray.length; i++) {
+      let targetCookie = cookieKeyArray[i];
+
+      // 前後のスペースをカットする
+      targetCookie = targetCookie.replace(/^\s+|\s+$/g, "");
+
+      // indexOf("=") とすると、= という文字が何番目にあるのか、というのが返ってくる
+      let valuIndex = targetCookie.indexOf("=");
+      console.log(valuIndex)
+
+      if (targetCookie.substring(0, valuIndex) == key) {
+        // キーが引数と一致した場合値を返す
+        console.log(valuIndex) // 4
+        console.log(targetCookie.substring(0, valuIndex)) // name
+        console.log(typeof targetCookie);
+        console.log("targetCookieのif文でtrueの判定です " + targetCookie);
+        return decodeURIComponent(targetCookie.slice(valuIndex + 1));
+      }
+    }
+
+    // 一致するものがなければ空文字を返す
+    return "";
+  }
+
+  console.log("getCookie関数：" + getCookie("name"));
+
   /*******************************************
 ユーザーエージェントよりスマホ端末か判定する
 *********************************************/
@@ -39,10 +74,13 @@ $(function () {
   let $jsLoading = $(".js-loading");
   let $jsLoadingModule = $(".js-loading-module");
   let $jsLoadingContent = $(".js-loading-content");
-  // 読み込みが完了したら、コールバックの処理を実行する
-  $(window).on("load", function () {
-    if($.cookie("access") == undefined ){
-      console.log('初回アクセス時')
+
+  if (getCookie("name") === "") {
+    // 読み込みが完了したら、コールバックの処理を実行する
+    $jsLoading.css("display", "block");
+    $jsBody.css("overflow", "hidden");
+    $(window).on("load", function () {
+      console.log("初回アクセス時");
       $jsLoadingModule.fadeOut("slow", function () {
         setTimeout(() => {
           $jsBody.css("overflow", "");
@@ -50,20 +88,22 @@ $(function () {
       });
       $jsLoadingContent.css("display", "block");
       $jsLoading.toggleClass("c-loading__open");
-    }else{
-      $jsLoadingModule.css("display", "none")
-      console.log('2回目以降')
-    }
-  });
+      // Cookieに初回アクセス時か判定する値を記述する
+      document.cookie = "name=" + encodeURIComponent("first_access");
+    });
+  } else {
+    $jsBody.css("overflow", "");
+    console.log("2回目以降");
+  }
 
   /****************************************
 フッターをを固定する
 *****************************************/
   let $ftr = $("#footer");
-  // console.log($ftr.offset());
-  // console.log($ftr.offset().top);
-  // console.log($ftr.outerHeight());
-  // console.log(window.innerHeight);
+  console.log($ftr.offset());
+  console.log($ftr.offset().top);
+  console.log($ftr.outerHeight());
+  console.log(window.innerHeight);
   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
     $ftr.attr({
       style: "position:fixed; top:" + (window.innerHeight - $ftr.outerHeight()) + "px; width: 100%;",

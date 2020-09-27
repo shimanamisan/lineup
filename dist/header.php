@@ -1,4 +1,4 @@
-  <body style="overflow: hidden;">
+  <body>
     <header class="l-header js-scroll-trigger p-rule__header">
       <h1 class="p-header__logo">
         <a href="index.php"><img src="img/LNIEUP.png" class="p-header__logo__img js-p-header__logo" alt="" /></a>

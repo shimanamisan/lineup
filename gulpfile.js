@@ -10,9 +10,10 @@ const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
 const postcss = require("gulp-postcss"); // PostCSS利用
-const autoprefixer = require('autoprefixer'); // 自動でベンダープレフィックスを記述する
+const autoprefixer = require("autoprefixer"); // 自動でベンダープレフィックスを記述する
 const sourcemaps = require("gulp-sourcemaps"); // ソースマップ作成
 const uglify = require("gulp-uglify"); // jsファイルを圧縮する
+const stripDebug = require("gulp-strip-debug"); // console.logやalertを削除する
 const rename = require("gulp-rename"); // ファイル名を変更するプラグインを追加
 const browserify = require("browserify");
 const babelify = require("babelify"); // babelify は Browserify 用の Babel 変換ライブラリ
@@ -26,7 +27,7 @@ var paths = {
   dstDir: "dist",
 };
 
-// browserifyを使ってJSファイルをビルド
+// browserifyを使ってJSファイルをビルド（開発環境）
 const js_Build = function (done) {
   browserify({
     entries: [paths.srcDir + "/js/main.js"],
@@ -46,6 +47,37 @@ const js_Build = function (done) {
         }
       )
     )
+    .pipe(sourcemaps.write("./"))
+    .pipe(
+      rename({
+        extname: ".min.js", // 圧縮後は min が追記されたファイル名になる
+      })
+    )
+    .pipe(gulp.dest(paths.dstDir + "/js/"));
+  done();
+};
+
+// 本番環境に上げる時の処理
+const js_Build_p = function (done) {
+  browserify({
+    entries: [paths.srcDir + "/js/main.js"],
+    debug: true,
+  })
+    .transform(babelify, { presets: ["@babel/preset-env"] })
+    .bundle()
+    .on("error", function (e) {
+      console.log(e);
+    })
+    .pipe(source("bundle.js")) // 引数に出力後のファイル名を記述
+    .pipe(
+      plumber(
+        //エラーが出ても処理を止めない
+        {
+          errorHandler: notify.onError("Error: <%= error.message %>"),
+        }
+      )
+    )
+    .pipe(streamify(stripDebug()))
     .pipe(streamify(uglify())) // streamifyを使用していないと、GulpUglifyError: Streaming not supported とエラーが出る
     .pipe(sourcemaps.write("./"))
     .pipe(
@@ -140,4 +172,4 @@ const php_serve = function () {
 // gulp コマンドで下記のタスクが実行される
 exports.default = php_serve;
 // gulp buildコマンドで実行される（初回ビルド時）
-exports.build = gulp.parallel(js_Build, sass_Build, img_Build);
+exports.build = gulp.parallel(js_Build_p, sass_Build, img_Build);
