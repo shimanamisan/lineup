@@ -20,12 +20,12 @@ $(function () {
 
       // indexOf("=") とすると、= という文字が何番目にあるのか、というのが返ってくる
       let valuIndex = targetCookie.indexOf("=");
-      console.log(valuIndex)
+      console.log(valuIndex);
 
       if (targetCookie.substring(0, valuIndex) == key) {
         // キーが引数と一致した場合値を返す
-        console.log(valuIndex) // 4
-        console.log(targetCookie.substring(0, valuIndex)) // name
+        console.log(valuIndex); // 4
+        console.log(targetCookie.substring(0, valuIndex)); // name
         console.log(typeof targetCookie);
         console.log("targetCookieのif文でtrueの判定です " + targetCookie);
         return decodeURIComponent(targetCookie.slice(valuIndex + 1));
@@ -115,10 +115,13 @@ $(function () {
 *****************************************/
   let $jsScrollHeader = $(".js-scroll-trigger");
   let $jsHeaderLogo = $(".js-p-header__logo");
+  let $jsThirdSection = $(".js-thirdSection");
 
   $(window).scroll(() => {
+    console.log($(window).scrollTop());
+    // scrollTop：要素のスクロール位置（Y座標）を取得
     if ($(window).scrollTop() >= 250) {
-      //   console.log($(window).scrollTop());
+      // スクロール位置が250を超えたらtrueに分岐
       $jsScrollHeader.addClass("c-anime__scroll");
       $jsHeaderLogo.addClass("p-header__scroll");
     } else {
@@ -137,7 +140,7 @@ SPナビメニュー
   $spMenuTrigger.on("click", function () {
     $spMenuTrigger.toggleClass("burgerActive");
     $spNavTrigger.toggleClass("navActive");
-    $spitem.toggleClass("c-anime__fadeIn");
+    $spitem.toggleClass("c-anime__fadeIn__spmenu");
   });
 
   /****************************************

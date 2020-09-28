@@ -4,24 +4,23 @@
     height: 70px;
     transition: all 0.4 ease;
   }
-  &__fadeIn{
-    animation: c-fadein__left;
-    animation-duration: 1.3s;
-    will-change: transform;
+  &__fadeIn {
+    animation: c-fadein ease-in-out forwards;
+    animation-duration: 1s;
+  }
+  &__fadeIn__spmenu {
+    animation: c-fadein__left ease-in-out forwards; // forwords：keyframsの100%の状態をキープする
+    animation-duration: 1s;
   }
 }
 
 @keyframes c-fadein {
-  from {
+  0% {
     opacity: 0;
-    -webkit-transform: translate(0, 100%);
-    -ms-transform: translate(0, 100%);
-    transform: translate(0, 100%);
+    transform: translate(0, 100px);
   }
-  to {
+  100% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }

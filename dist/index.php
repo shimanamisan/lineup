@@ -134,7 +134,7 @@ $top_news = [
       </section>
 
       <section class="c-homeContainer p-homeCategory__thirdSection">
-        <div class="p-homeCategory__thirdSection__wrapp">
+        <div class="p-homeCategory__thirdSection__wrapp js-thirdSection">
           <h2 class="p-homeCategory__thirdSection__title">チームのコンセプトは、<br />『楽しみながら勝つ』</h2>
           <p class="p-homeCategory__thirdSection__text">
             チームのコンセプトは、『楽しみながら勝つ』という草野球の永遠のテーマを掲げています。<br />
