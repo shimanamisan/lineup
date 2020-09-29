@@ -77,7 +77,7 @@ const js_Build_p = function (done) {
         }
       )
     )
-    .pipe(streamify(stripDebug()))
+    .pipe(streamify(stripDebug())) // ビルド時にconsole.log()の記述を削除する
     .pipe(streamify(uglify())) // streamifyを使用していないと、GulpUglifyError: Streaming not supported とエラーが出る
     .pipe(sourcemaps.write("./"))
     .pipe(

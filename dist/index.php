@@ -47,7 +47,6 @@ $top_news = [
         </div>
         <video class="p-mainVisual__movie" loop autoplay muted playsinline>
           <source src="movie/top-video.mp4" />
-          <source src="movie/top-video.webm" />
         </video>
 
         <div class="p-mainVisual__cover"></div>
