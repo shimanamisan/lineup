@@ -181,3 +181,23 @@ function getIP()
     debug("ユーザーのIPアドレスを取得しています。" . $_SERVER["REMOTE_ADDR"]);
     debug('   ');
 }
+// 日付によって読み込む動画を変更する関数
+function getMovie()
+{
+    $today = date('j');
+
+    debug('本日の日付です： function.php ' . $today);
+    debug(' ');
+
+    if ($today % 2 === 0) {
+        debug('本日の日付は偶数です。 function.php');
+        debug('');
+
+        return "movie/top-video.mp4";
+    } else {
+        debug('本日の日付は奇数です。 function.php');
+        debug('');
+
+        return "movie/top-video.mp4";
+    }
+}

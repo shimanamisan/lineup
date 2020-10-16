@@ -13,12 +13,17 @@ require('head.php');
 require('header.php');
 
 $top_news = [
+  '2020.10.12' => '試合結果を更新しました。',
   '2020.09.24' => '試合結果を更新しました。',
   '2020.09.07' => '試合結果を更新しました。',
   '2020.08.30' => '試合結果を更新しました。',
   '2020.08.21' => '試合結果を更新しました。',
   '2020.08.20' => 'ホームページをリニューアルしました。',
 ];
+
+$moviePath = getMovie();
+
+debug(' 関数戻り値です index.php ' . $moviePath);
 
 ?>
 
@@ -46,7 +51,7 @@ $top_news = [
           </ul>
         </div>
         <video class="p-mainVisual__movie" loop autoplay muted playsinline>
-          <source src="movie/top-video.mp4" />
+          <source src="<?php echo sanitize($moviePath); ?>" />  
         </video>
 
         <div class="p-mainVisual__cover"></div>
