@@ -28,6 +28,11 @@ debug(' 関数戻り値です index.php ' . $moviePath);
 ?>
 
     <main class="l-main js-main-show">
+      <div class="l-main__toplink js-top-link">
+        <a href="#">
+          <img src="./img/pagetop.png" alt="トップページへ移動">
+        </a>
+      </div>
     <div class="c-loading js-loading" style="display: none;">
       <div class="c-loading__module js-loading-module">
         <p class="c-loading__module__text">Loading...</p>

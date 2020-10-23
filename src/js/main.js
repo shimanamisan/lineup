@@ -116,17 +116,20 @@ $(function () {
   let $jsScrollHeader = $(".js-scroll-trigger");
   let $jsHeaderLogo = $(".js-p-header__logo");
   let $jsThirdSection = $(".js-thirdSection");
+  let $jsTopLink = $(".js-top-link");
 
   $(window).scroll(() => {
     console.log($(window).scrollTop());
     // scrollTop：要素のスクロール位置（Y座標）を取得
-    if ($(window).scrollTop() >= 250) {
+    if ($(window).scrollTop() >= 350) {
       // スクロール位置が250を超えたらtrueに分岐
       $jsScrollHeader.addClass("c-anime__scroll");
       $jsHeaderLogo.addClass("p-header__scroll");
+      $jsTopLink.fadeIn('slow');
     } else {
       $jsScrollHeader.removeClass("c-anime__scroll");
       $jsHeaderLogo.removeClass("p-header__scroll");
+      $jsTopLink.fadeOut('slow')
     }
   });
 
