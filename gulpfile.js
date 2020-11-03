@@ -163,7 +163,7 @@ const php_serve = function () {
 
   // ファイルが更新（ビルド）されたらリロードする
   gulp.watch(paths.dstDir + "/js/*.js").on("change", browserSync.reload);
-  // gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
+  gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
 
   gulp.watch("./dist/*.html").on("change", browserSync.reload);
   gulp.watch("./dist/*.php").on("change", browserSync.reload);
@@ -171,5 +171,5 @@ const php_serve = function () {
 
 // gulp コマンドで下記のタスクが実行される
 exports.default = php_serve;
-// gulp buildコマンドで実行される（初回ビルド時）
+// gulp buildコマンドで実行される
 exports.build = gulp.parallel(js_Build_p, sass_Build, img_Build);

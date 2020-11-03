@@ -182,7 +182,7 @@ function getIP()
     debug('   ');
 }
 // 日付によって読み込む動画を変更する関数
-function getMovie()
+function getMoviePath()
 {
     $today = date('j');
 
@@ -199,5 +199,40 @@ function getMovie()
         debug('');
 
         return "movie/top-video.mp4";
+    }
+}
+// 日によって読み込む画像を変更する関数
+function getImgPath()
+{
+    $today = date('j');
+    
+
+    debug('本日の日付です： function.php ' . $today);
+    debug(' ');
+
+    if ($today % 2 === 0) {
+        debug('本日の日付は偶数です。 function.php');
+        debug('');
+        
+        $imgArray = [
+            "img/top_panel_01.jpg",
+            "img/top_panel_02.jpg",
+            "img/top_panel_03.jpg",
+            "img/top_panel_04.jpg",
+            "img/top_panel_05.jpg",
+            "img/top_panel_06.jpg",
+        ];
+        
+        return $imgArray;
+    } else {
+        $imgArray = [
+            "img/bg_loading_01.jpg",
+            "img/bg_loading_02.jpg",
+            "img/bg_loading_03.jpg",
+            "img/bg_loading_04.jpg",
+            "img/bg_loading_05.jpg",
+            "img/bg_loading_06.jpg",
+        ];
+        return $imgArray;
     }
 }

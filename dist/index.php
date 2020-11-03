@@ -13,6 +13,8 @@ require('head.php');
 require('header.php');
 
 $top_news = [
+  '2020.10.31' => '試合結果を更新しました。',
+  '2020.10.24' => '試合結果を更新しました。',
   '2020.10.12' => '試合結果を更新しました。',
   '2020.09.24' => '試合結果を更新しました。',
   '2020.09.07' => '試合結果を更新しました。',
@@ -21,9 +23,11 @@ $top_news = [
   '2020.08.20' => 'ホームページをリニューアルしました。',
 ];
 
-$moviePath = getMovie();
+$moviePath = getMoviePath();
+$imgPath = getImgPath();
 
 debug(' 関数戻り値です index.php ' . $moviePath);
+debug(' 画像用パスの配列 inndex.php' . print_r($imgPath, true));
 
 ?>
 
@@ -77,7 +81,8 @@ debug(' 関数戻り値です index.php ' . $moviePath);
       <section class="p-homeCategory u-group">
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
-            <div class="p-homeCategory__img p-homeCategory__img--panel01">
+           
+            <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize($imgPath[0]); ?>)">
               <a href="team.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">チーム紹介</p>
@@ -87,7 +92,7 @@ debug(' 関数戻り値です index.php ' . $moviePath);
         </div>
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
-            <div class="p-homeCategory__img p-homeCategory__img--panel02">
+            <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize($imgPath[1]); ?>)">
               <a href="rule.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">チーム規則</p>
@@ -97,7 +102,7 @@ debug(' 関数戻り値です index.php ' . $moviePath);
         </div>
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
-            <div class="p-homeCategory__img p-homeCategory__img--panel03">
+            <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize($imgPath[2]); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/player" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">選手名鑑</p>
@@ -107,7 +112,7 @@ debug(' 関数戻り値です index.php ' . $moviePath);
         </div>
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
-            <div class="p-homeCategory__img p-homeCategory__img--panel04">
+            <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize($imgPath[3]); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">スケジュール</p>
@@ -117,7 +122,7 @@ debug(' 関数戻り値です index.php ' . $moviePath);
         </div>
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
-            <div class="p-homeCategory__img p-homeCategory__img--panel05">
+            <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize($imgPath[4]); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/stats" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">成績表</p>
@@ -127,7 +132,7 @@ debug(' 関数戻り値です index.php ' . $moviePath);
         </div>
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
-            <div class="p-homeCategory__img p-homeCategory__img--panel06">
+            <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize($imgPath[5]); ?>)">
               <a href="member.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">メンバー募集</p>
@@ -140,10 +145,10 @@ debug(' 関数戻り値です index.php ' . $moviePath);
       <section class="c-homeContainer p-homeCategory__thirdSection">
         <div class="p-homeCategory__thirdSection__wrapp js-thirdSection">
           <h2 class="p-homeCategory__thirdSection__title">チームのコンセプトは、<br />『楽しみながら勝つ』</h2>
-          <p class="p-homeCategory__thirdSection__text">
+          <div class="p-homeCategory__thirdSection__text">
             チームのコンセプトは、『楽しみながら勝つ』という草野球の永遠のテーマを掲げています。<br />
             これからも、仲良く、前向きに、チーム一丸となって戦っていきます！
-          </p>
+          </div>
         </div>
       </section>
 

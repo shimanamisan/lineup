@@ -76,9 +76,9 @@ $(function () {
   let $jsLoadingContent = $(".js-loading-content");
 
   if (getCookie("name") === "") {
-    // 読み込みが完了したら、コールバックの処理を実行する
     $jsLoading.css("display", "block");
     $jsBody.css("overflow", "hidden");
+    // 読み込みが完了したら、コールバックの処理を実行する
     $(window).on("load", function () {
       console.log("初回アクセス時");
       $jsLoadingModule.fadeOut("slow", function () {
@@ -115,18 +115,21 @@ $(function () {
 *****************************************/
   let $jsScrollHeader = $(".js-scroll-trigger");
   let $jsHeaderLogo = $(".js-p-header__logo");
+  let $pageTop = $(".js-pagetop"); // トップページへ戻るリンクの要素
   let $jsThirdSection = $(".js-thirdSection");
 
-  $(window).scroll(() => {
+  $(window).scroll(function() {
     console.log($(window).scrollTop());
     // scrollTop：要素のスクロール位置（Y座標）を取得
-    if ($(window).scrollTop() >= 250) {
+    if ($(window).scrollTop() >= 400) {
       // スクロール位置が250を超えたらtrueに分岐
       $jsScrollHeader.addClass("c-anime__scroll");
       $jsHeaderLogo.addClass("p-header__scroll");
+      $pageTop.addClass("p-footer__pagetop--active");
     } else {
       $jsScrollHeader.removeClass("c-anime__scroll");
       $jsHeaderLogo.removeClass("p-header__scroll");
+      $pageTop.removeClass("p-footer__pagetop--active");
     }
   });
 
@@ -219,4 +222,25 @@ youtube動画自動無限ループ
       window.location.href = "/";
     }, 3000);
   }
+
+  /****************************************
+リンク内のスムーズスクロール
+*****************************************/
+// #で始まるhref属性のリンクをクリックした際に処理を実行
+$('a[href^="#"]').on("click", function(){
+  // クリックした要素のhref属性を取得
+  let href = $(this).attr("href");
+
+  // 条件：上記で取得したhref属性が # かつ 空文字 であれば "html" と言う文字列を返す。そうでなければ取得してきたhtml属性を返す
+  // したがって、条件がtrueだったら "html" が返ってくるので $("html") と言うエレメントを入れていることになる
+  // 条件がfalseであれば $(this).attr("href") で取得したエレメントが入ってくる
+  let target = $(href == "#" || href === "" ? "html" : href);
+  // documentを起点として要素の座標を取得
+  let position = target.offset().top;
+  $("body, html").animate({
+    scrollTop: position // 移動先の要素の座標
+  }, 500);
+  return false; // aタグの画面遷移を止める
+})
+
 });
