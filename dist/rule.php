@@ -1,11 +1,10 @@
 <?php
-$siteTitle = 'チーム規則';
+$siteTitle = "チーム規則";
 // メタタグなど読み込み
-require('head.php');
+require "head.php";
 
 // bodyタグからheaderを読み込み
-require('header.php');
-
+require "header.php";
 ?>
 
     <main class="l-main__rule u-inner">
@@ -127,7 +126,6 @@ require('header.php');
       </section>
     </main>
 
-    <?php
-// フッターを読み込み
-require("footer.php");
+    <?php // フッターを読み込み
+    require "footer.php";
 ?>

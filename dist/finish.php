@@ -3,46 +3,52 @@
 /****************************************
  共通処理読み込み
 *****************************************/
-require('Library/function.php');
+require "Library/function.php";
 
-debug('POSTの中身を確認しています。finish.php：'. print_r($_POST, true));
-debug('   ');
-debug('セッションの中身を確認しています。finish.php：'. print_r($_SESSION, true));
-debug('   ');
+debug("POSTの中身を確認しています。finish.php：" . print_r($_POST, true));
+debug("   ");
+debug(
+    "セッションの中身を確認しています。finish.php：" . print_r($_SESSION, true)
+);
+debug("   ");
 
-if (isset($_POST['top']) && $_POST['top']) {
+if (isset($_POST["top"]) && $_POST["top"]) {
     header("Location:index.php");
     exit();
 }
 
-if (empty($_SESSION['transition'])) {
-    debug('不正に画面遷移してきました。お問い合わせページへ戻ります。finish.php ');
-    debug('   ');
+if (empty($_SESSION["transition"])) {
+    debug(
+        "不正に画面遷移してきました。お問い合わせページへ戻ります。finish.php "
+    );
+    debug("   ");
     header("Location:contact.php");
     exit();
 }
 
-if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-    debug('トークンが一致していません。お問い合わせページへ戻ります。finish.php ');
-    debug('   ');
+if ($_POST["csrf_token"] !== $_SESSION["csrf_token"]) {
+    debug(
+        "トークンが一致していません。お問い合わせページへ戻ります。finish.php "
+    );
+    debug("   ");
     $_SESSION = [];
     session_destroy();
     header("Location:contact.php");
 }
 
 // セッションのユーザー情報を格納
-if ($_SESSION['mode'] === 'member') {
+if ($_SESSION["mode"] === "member") {
     /****************************************
  メンバー募集から遷移してきた時の処理
 *****************************************/
-    $name = $_SESSION['name'];
-    $email = $_SESSION['email'];
-    $position = $_SESSION['position'];
-    $contact = $_SESSION['contact'];
+    $name = $_SESSION["name"];
+    $email = $_SESSION["email"];
+    $position = $_SESSION["position"];
+    $contact = $_SESSION["contact"];
 
-    $from = 'team.info@lineupbaseballclub.com';
+    $from = "team.info@lineupbaseballclub.com";
     $to = $email;
-    $subject = 'お問い合わせ内容を受け付けました。';
+    $subject = "お問い合わせ内容を受け付けました。";
     $comment = <<<EOT
 {$name}　様
 
@@ -76,8 +82,8 @@ EOT;
     /****************************************
      管理者へ通知する内容
     *****************************************/
-    $toAdmin = 'team.info@lineupbaseballclub.com';
-    $subjectAdmin = 'メッセージを受信しました｜lineupbaseballclub.com';
+    $toAdmin = "team.info@lineupbaseballclub.com";
+    $subjectAdmin = "メッセージを受信しました｜lineupbaseballclub.com";
     $commentAdmin = <<<EOT
 
 ウェブサイトより下記のお問い合わせが有りました。
@@ -98,17 +104,17 @@ EOT;
 
 ユーザーへ返信してください。
 EOT;
-} elseif ($_SESSION['mode'] === 'contact') {
+} elseif ($_SESSION["mode"] === "contact") {
     /****************************************
  お問い合わせページから遷移して来た時の処理
 *****************************************/
-    $name = $_SESSION['name'];
-    $email = $_SESSION['email'];
-    $contact = $_SESSION['contact'];
+    $name = $_SESSION["name"];
+    $email = $_SESSION["email"];
+    $contact = $_SESSION["contact"];
 
-    $from = 'team.info@lineupbaseballclub.com';
-    $to = $_SESSION['email'];
-    $subject = 'お問い合わせ内容を受け付けました。';
+    $from = "team.info@lineupbaseballclub.com";
+    $to = $_SESSION["email"];
+    $subject = "お問い合わせ内容を受け付けました。";
     $comment = <<<EOT
 {$name}　様
 
@@ -139,8 +145,8 @@ EOT;
     /****************************************
      管理者へ通知する内容
     *****************************************/
-    $toAdmin = 'team.info@lineupbaseballclub.com';
-    $subjectAdmin = 'メッセージを受信しました｜lineupbaseballclub.com';
+    $toAdmin = "team.info@lineupbaseballclub.com";
+    $subjectAdmin = "メッセージを受信しました｜lineupbaseballclub.com";
     $commentAdmin = <<<EOT
 
 ウェブサイトより下記のお問い合わせが有りました。
@@ -159,7 +165,6 @@ EOT;
 ユーザーへ返信してください。
 EOT;
 }
-
 
 // 問い合わせたユーザーへ送信
 sendMail($from, $to, $subject, $comment);
@@ -171,19 +176,20 @@ sendMailAdmin($toAdmin, $subjectAdmin, $commentAdmin);
 $_SESSION = [];
 // セッションを削除
 session_destroy();
-debug('メールを送信したので、セッションを削除しました。finish.php：'. print_r($_SESSION, true));
-debug('   ');
-
+debug(
+    "メールを送信したので、セッションを削除しました。finish.php：" .
+        print_r($_SESSION, true)
+);
+debug("   ");
 ?>
 
 <?php
-$siteTitle = '送信完了';
+$siteTitle = "送信完了";
 // メタタグなど読み込み
-require('head.php');
+require "head.php";
 
 // bodyタグからheaderを読み込み
-require('header.php');
-
+require "header.php";
 ?>
 
 
@@ -208,7 +214,6 @@ require('header.php');
       </section>
     </main>
 
-    <?php
-// フッターを読み込み
-require("footer.php");
+    <?php // フッターを読み込み
+    require "footer.php";
 ?>

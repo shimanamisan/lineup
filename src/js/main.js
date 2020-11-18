@@ -22,7 +22,7 @@ $(function () {
       let valuIndex = targetCookie.indexOf("=");
       console.log(valuIndex);
 
-      if (targetCookie.substring(0, valuIndex) == key) {
+      if (targetCookie.substring(0, valuIndex) === key) {
         // キーが引数と一致した場合値を返す
         console.log(valuIndex); // 4
         console.log(targetCookie.substring(0, valuIndex)); // name
@@ -43,7 +43,9 @@ $(function () {
 *********************************************/
   // 即時関数をの返り値を変数に格納（オブジェクトの形で返ってくる）
   let UserAgent = (function () {
-    let phoneActive = /iPhone|iPod|iPad|Android/i.test(window.navigator.userAgent);
+    let phoneActive = /iPhone|iPod|iPad|Android/i.test(
+      window.navigator.userAgent
+    );
     let $mainVisual = $(".js-mainVisual");
     let $youtube = $(".js-youtube");
 
@@ -106,7 +108,10 @@ $(function () {
   console.log(window.innerHeight);
   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
     $ftr.attr({
-      style: "position:fixed; top:" + (window.innerHeight - $ftr.outerHeight()) + "px; width: 100%;",
+      style:
+        "position:fixed; top:" +
+        (window.innerHeight - $ftr.outerHeight()) +
+        "px; width: 100%;",
     });
   }
 
@@ -118,7 +123,7 @@ $(function () {
   let $pageTop = $(".js-pagetop"); // トップページへ戻るリンクの要素
   let $jsThirdSection = $(".js-thirdSection");
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     console.log($(window).scrollTop());
     // scrollTop：要素のスクロール位置（Y座標）を取得
     if ($(window).scrollTop() >= 400) {
@@ -175,19 +180,27 @@ youtube動画自動無限ループ
 
     return {
       slideNext: function () {
-        $sliderContainer.animate({ left: "-=" + movieItemWidth + "px" }, DURATION, function () {
-          // アニメーション完了時、先頭の要素を最後尾に移動する
+        $sliderContainer.animate(
+          { left: "-=" + movieItemWidth + "px" },
+          DURATION,
+          function () {
+            // アニメーション完了時、先頭の要素を最後尾に移動する
 
-          $sliderContainer.append($(".p-slider__container li:first-child"));
-          $sliderContainer.css(sliderNextObj);
-        });
+            $sliderContainer.append($(".p-slider__container li:first-child"));
+            $sliderContainer.css(sliderNextObj);
+          }
+        );
       },
       slidePrev: function () {
-        $sliderContainer.animate({ left: "+=" + movieItemWidth + "px" }, DURATION, function () {
-          // アニメーション完了時、最後尾の要素を先頭に持ってくる
-          $sliderContainer.prepend($(".p-slider__container li:last-child"));
-          $sliderContainer.css(sliderPrevObj);
-        });
+        $sliderContainer.animate(
+          { left: "+=" + movieItemWidth + "px" },
+          DURATION,
+          function () {
+            // アニメーション完了時、最後尾の要素を先頭に持ってくる
+            $sliderContainer.prepend($(".p-slider__container li:last-child"));
+            $sliderContainer.css(sliderPrevObj);
+          }
+        );
       },
       init: function () {
         // スライドさせる大本の枠を決定している
@@ -226,21 +239,23 @@ youtube動画自動無限ループ
   /****************************************
 リンク内のスムーズスクロール
 *****************************************/
-// #で始まるhref属性のリンクをクリックした際に処理を実行
-$('a[href^="#"]').on("click", function(){
-  // クリックした要素のhref属性を取得
-  let href = $(this).attr("href");
+  // #で始まるhref属性のリンクをクリックした際に処理を実行
+  $('a[href^="#"]').on("click", function () {
+    // クリックした要素のhref属性を取得
+    let href = $(this).attr("href");
 
-  // 条件：上記で取得したhref属性が # かつ 空文字 であれば "html" と言う文字列を返す。そうでなければ取得してきたhtml属性を返す
-  // したがって、条件がtrueだったら "html" が返ってくるので $("html") と言うエレメントを入れていることになる
-  // 条件がfalseであれば $(this).attr("href") で取得したエレメントが入ってくる
-  let target = $(href == "#" || href === "" ? "html" : href);
-  // documentを起点として要素の座標を取得
-  let position = target.offset().top;
-  $("body, html").animate({
-    scrollTop: position // 移動先の要素の座標
-  }, 500);
-  return false; // aタグの画面遷移を止める
-})
-
+    // 条件：上記で取得したhref属性が # かつ 空文字 であれば "html" と言う文字列を返す。そうでなければ取得してきたhtml属性を返す
+    // したがって、条件がtrueだったら "html" が返ってくるので $("html") と言うエレメントを入れていることになる
+    // 条件がfalseであれば $(this).attr("href") で取得したエレメントが入ってくる
+    let target = $(href == "#" || href === "" ? "html" : href);
+    // documentを起点として要素の座標を取得
+    let position = target.offset().top;
+    $("body, html").animate(
+      {
+        scrollTop: position, // 移動先の要素の座標
+      },
+      500
+    );
+    return false; // aタグの画面遷移を止める
+  });
 });
