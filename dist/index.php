@@ -13,13 +13,13 @@ require "head.php";
 require "header.php";
 
 $top_news = [
-    "2020.10.31" => "試合結果を更新しました。",
-    "2020.10.24" => "試合結果を更新しました。",
-    "2020.10.12" => "試合結果を更新しました。",
-    "2020.09.24" => "試合結果を更新しました。",
-    "2020.09.07" => "試合結果を更新しました。",
-    "2020.08.30" => "試合結果を更新しました。",
-    "2020.08.21" => "試合結果を更新しました。",
+    "2020.10.31" => "VS 大阪ドリームスを更新しました。",
+    "2020.10.24" => "VS ヤンチャーズ、GlassBoys、扶桑薬品工業を更新しました。",
+    "2020.10.12" => "VS リーブスを更新しました。",
+    "2020.09.24" => "VS ブルーファルコンズを更新しました。",
+    "2020.09.07" => "VS ToLuckys、OTDspiritsを更新しました。",
+    "2020.08.30" => "VS 大阪府庁野球部を更新しました。",
+    "2020.08.21" => "VS デバッガーズネオを更新しました。",
     "2020.08.20" => "ホームページをリニューアルしました。",
 ];
 
@@ -108,8 +108,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-                    $imgPath[2]
-                ); ?>)">
+    $imgPath[2]
+); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/player" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">選手名鑑</p>
@@ -120,8 +120,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-                $imgPath[3]
-            ); ?>)">
+    $imgPath[3]
+); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">スケジュール</p>
@@ -132,8 +132,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-                $imgPath[4]
-            ); ?>)">
+    $imgPath[4]
+); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/stats" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">成績表</p>
@@ -144,8 +144,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-                $imgPath[5]
-            ); ?>)">
+    $imgPath[5]
+); ?>)">
               <a href="member.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">メンバー募集</p>
