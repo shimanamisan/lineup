@@ -3,103 +3,104 @@
 /****************************************
  共通処理読み込み
 *****************************************/
-require('Library/function.php');
+require "Library/function.php";
 
 getIP();
 
 // ページ宣言
-$mode = 'member';
+$mode = "member";
 
-if (isset($_SESSION['mode']) && $_SESSION['mode'] !== $mode) {
+if (isset($_SESSION["mode"]) && $_SESSION["mode"] !== $mode) {
     $_SESSION = []; // セッションをする前に空にする
     session_destroy(); // この時点ではセッションは削除されない
-    debug('お問い合わせページから遷移してきました。セッションの値を削除します。member.php' . print_r($_SESSION, true));
-    debug('   ');
+    debug(
+        "お問い合わせページから遷移してきました。セッションの値を削除します。member.php" .
+            print_r($_SESSION, true)
+    );
+    debug("   ");
 }
 
 // セレクトボックスの内容を生成
 $selectBox = [
-  '1' => 'ピッチャー',
-  '2' => 'キャッチャー',
-  '3' => 'ファースト',
-  '4' => 'セカンド',
-  '5' => 'サード',
-  '6' => 'ショート',
-  '8' => 'レフト',
-  '9' => 'センター',
-  '10' => 'ライト',
-  '11' => 'マネージャー',
+    "1" => "ピッチャー",
+    "2" => "キャッチャー",
+    "3" => "ファースト",
+    "4" => "セカンド",
+    "5" => "サード",
+    "6" => "ショート",
+    "8" => "レフト",
+    "9" => "センター",
+    "10" => "ライト",
+    "11" => "マネージャー",
 ];
 
 // POST内容の確認
-debug('POST内容の確認をしています。member.php ' . print_r($_POST, true));
-debug('   ');
+debug("POST内容の確認をしています。member.php " . print_r($_POST, true));
+debug("   ");
 
 // POST送信されていた場合
 if (!empty($_POST)) {
-    debug('POST送信されている処理です。member.php');
-    debug('   ');
+    debug("POST送信されている処理です。member.php");
+    debug("   ");
     // POST時の値をフォームに表示させるので、確認画面から戻ってきた場合に
     // SESSIONの値を表示させているものをクリアする
-    clearSession('name');
-    clearSession('email');
-    clearSession('contact');
-    clearSession('position');
+    clearSession("name");
+    clearSession("email");
+    clearSession("contact");
+    clearSession("position");
 
     // 変数にフォームの値を格納
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $contact = $_POST['contact'];
-    $position = $_POST['position'];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $contact = $_POST["contact"];
+    $position = $_POST["position"];
 
     // 入力必須
-    validRequire($name, 'name');
-    validRequire($email, 'email');
-    validRequire($contact, 'contact');
-    validRequire($position, 'position');
+    validRequire($name, "name");
+    validRequire($email, "email");
+    validRequire($contact, "contact");
+    validRequire($position, "position");
 
     // バリデーションエラーが無い場合
     if (empty($err_msg)) {
-        debug('未入力バリデーションが通った時の処理です。member.php');
-        debug('   ');
+        debug("未入力バリデーションが通った時の処理です。member.php");
+        debug("   ");
 
         // Email形式チェック
-        validEmail($email, 'email');
+        validEmail($email, "email");
         // 名前が全角かチェック
-        validNameText($name, 'name');
+        validNameText($name, "name");
 
         // 各フォーム文字数チェック
-        validMaxLen($name, 'name', 50);
-        validMaxLen($email, 'email');
-        validContactMaxLen($contact, 'contact');
+        validMaxLen($name, "name", 50);
+        validMaxLen($email, "email");
+        validContactMaxLen($contact, "contact");
 
         if (empty($err_msg)) {
-            debug('バリデーションOKの時の処理です。member.php');
-            debug('   ');
-    
-            $_SESSION['name'] = $name;
-            $_SESSION['email'] = $email;
-            $_SESSION['contact'] = $contact;
-            $_SESSION['position'] = $position;
-            $_SESSION['transition'] = true;
-            $_SESSION['mode'] = $mode;
+            debug("バリデーションOKの時の処理です。member.php");
+            debug("   ");
+
+            $_SESSION["name"] = $name;
+            $_SESSION["email"] = $email;
+            $_SESSION["contact"] = $contact;
+            $_SESSION["position"] = $position;
+            $_SESSION["transition"] = true;
+            $_SESSION["mode"] = $mode;
 
             header("Location:confirm.php");
             exit();
         }
     }
 }
-
 ?>
 
 <?php
-$siteTitle = 'メンバー募集';
+$siteTitle = "メンバー募集";
 // メタタグなど読み込み
-require('head.php');
+require "head.php";
 
 // bodyタグからheaderを読み込み
-require('header.php');
-
+require "header.php";
 ?>
 
 
@@ -188,13 +189,13 @@ require('header.php');
                 はじめまして！
                 LINEUP代表の和田と申します。
                 </p>
-                <p>
+                <p class="p-member__text">
                 当チームではメンバー、マネージャー（男女問わず）を募集しております。
                 </p>
 <p class="p-member__text">
 活動は毎週行っており、ポジションは当日参加するメンバーによって決める為、複数ポジションを守って頂くことになります。
 </p>
-<p>
+<p class="p-member__text">
 ※チーム事情として捕手が足りておりません。
 </p>
 <ul>
@@ -224,7 +225,7 @@ require('header.php');
 <p class="p-member__text">
 ご興味があるかたは是非お気軽にご連絡下さい！
 </p>
-<ul>
+<ul class="p-member__list">
 <li class="p-member__text">■2004年結成。</li>
 <li class="p-member__text">■在籍メンバー15名。</li>
 <li>※正メンバー12名。準メンバー3名。記録員1名。</li>
@@ -232,7 +233,7 @@ require('header.php');
 <li class="p-member__text">■参加大会はGBNとSKYCUP。年間通してリバーサイドリーグへ参戦しています。</li>
 <li class="p-member__text">■活動日は毎週土曜日。基本は波除運動場での活動になり、あとは対戦相手様との兼ね合いで遠征に出ることもあります。</li>
 <li class="p-member__text">■ユニフォーム購入代13,000円。会費年間12,000円(スポーツ保険料込み)。</li>
-<li class="p-member__text">参加日球場代＋審判代折半200～500円程度。</li>
+<li class="p-member__text">■参加日球場代＋審判代折半200～500円程度。</li>
 <li class="p-member__text">■公式戦、リーグ戦での活動がメインの為、派遣審判をお願いして試合することが多いです。</li>
 </ul>
               </td>
@@ -256,20 +257,16 @@ require('header.php');
                     type="text"
                     name="name"
                     class="c-form__input 
-                    <?php
-                    if (!empty($err_msg['name'])) {
-                        echo 'c-error';
-                    }
-                    ?>"
+                    <?php if (!empty($err_msg["name"])) {
+    echo "c-error";
+} ?>"
                     placeholder="お名前"
-                    value="<?php echo getFormData('name');?>"
+                    value="<?php echo getFormData("name"); ?>"
                   />
                   <div class="c-error__msg">
-                  <?php
-                    if (!empty($err_msg['name'])) {
-                        echo sanitize('お名前は') . $err_msg['name'];
-                    }
-                    ?>
+                  <?php if (!empty($err_msg["name"])) {
+    echo sanitize("お名前は") . $err_msg["name"];
+} ?>
                   </div>
                 </td>
               </tr>
@@ -282,18 +279,16 @@ require('header.php');
                   <input
                     type="text"
                     name="email"
-                    class="c-form__input <?php if (!empty($err_msg['email'])) {
-                        echo 'c-error';
-                    } ?>"
+                    class="c-form__input <?php if (!empty($err_msg["email"])) {
+    echo "c-error";
+} ?>"
                     placeholder="メールアドレス"
-                    value="<?php echo getFormData('email');?>"
+                    value="<?php echo getFormData("email"); ?>"
                   />
                   <div class="c-error__msg">
-                  <?php
-                    if (!empty($err_msg['email'])) {
-                        echo sanitize('メールアドレスは') . $err_msg['email'];
-                    }
-                    ?>
+                  <?php if (!empty($err_msg["email"])) {
+    echo sanitize("メールアドレスは") . $err_msg["email"];
+} ?>
                   </div>
                 </td>
               </tr>
@@ -306,25 +301,24 @@ require('header.php');
                 <div class="c-form__selectbox__wrapp">
                 <span class="c-form__selectbox__icon"></span>
                     <select class="c-form__input c-form__selectbox
-                    <?php
-                    if (!empty($err_msg['position'])) {
-                        echo 'c-error';
-                    }?> 
+                    <?php if (!empty($err_msg["position"])) {
+    echo "c-error";
+} ?> 
                     " name="position" id="">
                       <option value="">選択してください</option>
-                      <?php foreach ($selectBox as $key => $val):?>
-                        <option value="<?php echo $val ?>" <?php if ($key === getFormData($key)) {
-                        echo 'selected' ;
-                    }?>><?php echo $val?></option>
-                      <?php endforeach;?>
+                      <?php foreach ($selectBox as $key => $val): ?>
+                        <option value="<?php echo $val; ?>" <?php if (
+    $key === getFormData($key)
+) {
+    echo "selected";
+} ?>><?php echo $val; ?></option>
+                      <?php endforeach; ?>
                     </select>
                 </div>
                   <div class="c-error__msg">
-                  <?php
-                    if (!empty($err_msg['position'])) {
-                        echo sanitize('選択項目は') . $err_msg['position'];
-                    }
-                    ?>
+                  <?php if (!empty($err_msg["position"])) {
+    echo sanitize("選択項目は") . $err_msg["position"];
+} ?>
                   </div>
                 </td>
               </tr>
@@ -337,19 +331,19 @@ require('header.php');
                   <textarea
                     type="text"
                     name="contact"
-                    class="c-form__textarea <?php if (!empty($err_msg['contact'])) {
-                        echo 'c-error';
-                    } ?>"
+                    class="c-form__textarea <?php if (
+                        !empty($err_msg["contact"])
+                    ) {
+    echo "c-error";
+} ?>"
                     cols="40"
                     rows="10"
                     placeholder="お問い合わせ内容"
-                  ><?php echo getFormData('contact');?></textarea>
+                  ><?php echo getFormData("contact"); ?></textarea>
                   <div class="c-error__msg c-error__text--contact">
-                  <?php
-                    if (!empty($err_msg['contact'])) {
-                        echo sanitize('お問い合わせ内容は') . $err_msg['contact'];
-                    }
-                    ?>
+                  <?php if (!empty($err_msg["contact"])) {
+    echo sanitize("お問い合わせ内容は") . $err_msg["contact"];
+} ?>
                   </div>
                 </td>
               </tr>
@@ -364,7 +358,6 @@ require('header.php');
       </section>
     </main>
 
-    <?php
-// フッターを読み込み
-require("footer.php");
+    <?php // フッターを読み込み
+    require "footer.php";
 ?>

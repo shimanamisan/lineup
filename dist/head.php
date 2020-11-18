@@ -12,7 +12,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "UA-138230091-1");
     </script>
     <meta charset="UTF-8" />
