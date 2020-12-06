@@ -1,13 +1,13 @@
 .p-contact {
-  &__table {
-    & th {
-      width: 250px;
-      text-align: left;
-      @include mq(){
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
-  }
+	&__table {
+		& th {
+			width: 250px;
+			text-align: left;
+			@include mq() {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+			}
+		}
+	}
 }

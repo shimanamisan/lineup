@@ -172,6 +172,7 @@ require "header.php";
         </form>
       </section>
     </main>
-    <?php // フッターを読み込み
-    require "footer.php";
+    <?php
+// フッターを読み込み
+require "footer.php";
 ?>

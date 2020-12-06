@@ -258,15 +258,15 @@ require "header.php";
                     name="name"
                     class="c-form__input 
                     <?php if (!empty($err_msg["name"])) {
-    echo "c-error";
-} ?>"
+                        echo "c-error";
+                    } ?>"
                     placeholder="お名前"
                     value="<?php echo getFormData("name"); ?>"
                   />
                   <div class="c-error__msg">
                   <?php if (!empty($err_msg["name"])) {
-    echo sanitize("お名前は") . $err_msg["name"];
-} ?>
+                      echo sanitize("お名前は") . $err_msg["name"];
+                  } ?>
                   </div>
                 </td>
               </tr>
@@ -280,15 +280,15 @@ require "header.php";
                     type="text"
                     name="email"
                     class="c-form__input <?php if (!empty($err_msg["email"])) {
-    echo "c-error";
-} ?>"
+                        echo "c-error";
+                    } ?>"
                     placeholder="メールアドレス"
                     value="<?php echo getFormData("email"); ?>"
                   />
                   <div class="c-error__msg">
                   <?php if (!empty($err_msg["email"])) {
-    echo sanitize("メールアドレスは") . $err_msg["email"];
-} ?>
+                      echo sanitize("メールアドレスは") . $err_msg["email"];
+                  } ?>
                   </div>
                 </td>
               </tr>
@@ -302,8 +302,8 @@ require "header.php";
                 <span class="c-form__selectbox__icon"></span>
                     <select class="c-form__input c-form__selectbox
                     <?php if (!empty($err_msg["position"])) {
-    echo "c-error";
-} ?> 
+                        echo "c-error";
+                    } ?> 
                     " name="position" id="">
                       <option value="">選択してください</option>
                       <?php foreach ($selectBox as $key => $val): ?>
@@ -317,8 +317,8 @@ require "header.php";
                 </div>
                   <div class="c-error__msg">
                   <?php if (!empty($err_msg["position"])) {
-    echo sanitize("選択項目は") . $err_msg["position"];
-} ?>
+                      echo sanitize("選択項目は") . $err_msg["position"];
+                  } ?>
                   </div>
                 </td>
               </tr>
@@ -334,16 +334,16 @@ require "header.php";
                     class="c-form__textarea <?php if (
                         !empty($err_msg["contact"])
                     ) {
-    echo "c-error";
-} ?>"
+                        echo "c-error";
+                    } ?>"
                     cols="40"
                     rows="10"
                     placeholder="お問い合わせ内容"
                   ><?php echo getFormData("contact"); ?></textarea>
                   <div class="c-error__msg c-error__text--contact">
                   <?php if (!empty($err_msg["contact"])) {
-    echo sanitize("お問い合わせ内容は") . $err_msg["contact"];
-} ?>
+                      echo sanitize("お問い合わせ内容は") . $err_msg["contact"];
+                  } ?>
                   </div>
                 </td>
               </tr>
@@ -358,6 +358,7 @@ require "header.php";
       </section>
     </main>
 
-    <?php // フッターを読み込み
-    require "footer.php";
+    <?php
+// フッターを読み込み
+require "footer.php";
 ?>

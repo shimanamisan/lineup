@@ -180,7 +180,7 @@ $SKYCUP = "";
       </section>
     </main>
 
-<?php // フッターを読み込み
+<?php
 // フッターを読み込み
 require "footer.php";
 ?>

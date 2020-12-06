@@ -71,8 +71,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
               <li class="p-news__item">
                 <span class="p-news__date"><?php echo sanitize($key); ?></span>
                 <span class="p-news__itemTitle"><?php echo sanitize(
-    $value
-); ?></span>
+                    $value
+                ); ?></span>
               </li>
             <?php endforeach; ?>
             </ul>
@@ -84,8 +84,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
           <div class="p-homeCategory__cover">
            
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-    $imgPath[0]
-); ?>)">
+                $imgPath[0]
+            ); ?>)">
               <a href="team.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">チーム紹介</p>
@@ -96,8 +96,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-    $imgPath[1]
-); ?>)">
+                $imgPath[1]
+            ); ?>)">
               <a href="rule.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">チーム規則</p>
@@ -108,8 +108,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-    $imgPath[2]
-); ?>)">
+                $imgPath[2]
+            ); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/player" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">選手名鑑</p>
@@ -120,8 +120,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-    $imgPath[3]
-); ?>)">
+                $imgPath[3]
+            ); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/plan" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">スケジュール</p>
@@ -132,8 +132,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-    $imgPath[4]
-); ?>)">
+                $imgPath[4]
+            ); ?>)">
               <a href="https://teams.one/teams/lineupbaseballclub/stats" target="_brank" rel="noopener"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">成績表</p>
@@ -144,8 +144,8 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         <div class="p-homeCategory__item">
           <div class="p-homeCategory__cover">
             <div class="p-homeCategory__img" style="background-image: url(<?php echo sanitize(
-    $imgPath[5]
-); ?>)">
+                $imgPath[5]
+            ); ?>)">
               <a href="member.php"></a>
               <div class="p-homeCategory__img--inner">
                 <p class="p-homeCategory__img--content">メンバー募集</p>
@@ -173,13 +173,15 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
             <i class="p-slider p-slider__next js-slide-next fas fa-chevron-right"></i>
             <ul class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container">
               <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe
-                  class="p-youtube"
-                  src="//www.youtube.com/embed/n6uQNIvgLco"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+
+              <!-- 削除されている -->
+              <iframe 
+                class="p-youtube" 
+                src="//www.youtube.com/embed/xKt08ehEAE4"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
               </li>
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
@@ -190,15 +192,17 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
                   allowfullscreen
                 ></iframe>
               </li>
+              <!-- ここが最初中央に配置される -->
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
                   class="p-youtube"
-                  src="//www.youtube.com/embed/xKt08ehEAE4"
+                  src="//www.youtube.com/embed/IH52aBOIhPU" 
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </li>
+              <!-- ここが最初中央に配置される -->
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
                   class="p-youtube"
@@ -223,6 +227,7 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
       </section>
     </main>
 
-    <?php // フッターを読み込み
-    require "footer.php";
+    <?php
+// フッターを読み込み
+require "footer.php";
 ?>
