@@ -13,6 +13,7 @@ require "head.php";
 require "header.php";
 
 $top_news = [
+    "2020.12.05" => "VS サンドロットを更新しました。",
     "2020.11.21" => "VS 大阪ウルトラスを更新しました。",
     "2020.11.07" => "VS UK Baseballclubを更新しました。",
     "2020.10.31" => "VS 大阪ドリームスを更新しました。",
@@ -194,7 +195,7 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
                   allowfullscreen
                 ></iframe>
               </li>
-              <!-- ここが最初中央に配置される -->
+              <!-- start ここが最初中央に配置される -->
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
                   class="p-youtube"
@@ -204,15 +205,15 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
                   allowfullscreen>
                 </iframe>
               </li>
-              <!-- ここが最初中央に配置される -->
+              <!-- end ここが最初中央に配置される -->
               <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe
+                <iframe 
                   class="p-youtube"
-                  src="//www.youtube.com/embed/lLH7XCjYgpE"
+                  src="//www.youtube.com/embed/KENrLCcGzOw"
                   frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
               </li>
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
