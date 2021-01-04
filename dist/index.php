@@ -14,6 +14,7 @@ require "header.php";
 
 $top_news = [
     "2020.12.05" => "VS サンドロットを更新しました。",
+    "2020.11.28" => "VS ナイトスターズを更新しました。",
     "2020.11.21" => "VS 大阪ウルトラスを更新しました。",
     "2020.11.07" => "VS UK Baseballclubを更新しました。",
     "2020.10.31" => "VS 大阪ドリームスを更新しました。",
@@ -176,22 +177,20 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
             <i class="p-slider p-slider__next js-slide-next fas fa-chevron-right"></i>
             <ul class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container">
               <li class="p-homeCategory__movie__item p-slider__item">
-
-              <!-- 削除されている -->
-              <iframe 
-                class="p-youtube" 
-                src="//www.youtube.com/embed/xKt08ehEAE4"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
+                <iframe
+                  class="p-youtube"
+                  src="https://www.youtube.com/embed/M6mGUH_gsyU"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
               </li>
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
                   class="p-youtube"
-                  src="//www.youtube.com/embed/lLH7XCjYgpE"
+                  src="https://www.youtube.com/embed/lLH7XCjYgpE"
                   frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowfullscreen
                 ></iframe>
               </li>
@@ -199,7 +198,7 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
                   class="p-youtube"
-                  src="//www.youtube.com/embed/IH52aBOIhPU" 
+                  src="https://www.youtube.com/embed/IH52aBOIhPU" 
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
@@ -209,7 +208,7 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe 
                   class="p-youtube"
-                  src="//www.youtube.com/embed/KENrLCcGzOw"
+                  src="https://www.youtube.com/embed/KENrLCcGzOw"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowfullscreen>
@@ -218,9 +217,9 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
               <li class="p-homeCategory__movie__item p-slider__item">
                 <iframe
                   class="p-youtube"
-                  src="//www.youtube.com/embed/n6uQNIvgLco"
+                  src="https://www.youtube.com/embed/n6uQNIvgLco"
                   frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowfullscreen
                 ></iframe>
               </li>
