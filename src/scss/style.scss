@@ -22,30 +22,12 @@
 /*****************************
  component
 ******************************/
-@import "object/component/homeContainer";
-@import "object/component/title";
-@import "object/component/form";
-@import "object/component/animate";
-@import "object/component/table";
-@import "object/component/btn";
-@import "object/component/error";
-@import "object/component/loading";
+@import "object/component/**";
 
 /*****************************
  project
 ******************************/
-@import "object/component/project/header";
-@import "object/component/project/footer";
-@import "object/component/project/news";
-@import "object/component/project/youtube";
-@import "object/component/project/mainVisual";
-@import "object/component/project/homeCategory";
-@import "object/component/project/slider";
-@import "object/component/project/rule";
-@import "object/component/project/team";
-@import "object/component/project/contact";
-@import "object/component/project/social";
-@import "object/component/project/member";
+@import "object/component/project/**";
 
 /*****************************
  utility

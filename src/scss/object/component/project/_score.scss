@@ -1,0 +1,54 @@
+.p-score {
+  /* 表のthタグ共通スタイル */
+  & th {
+    background-color: #f7f7f7;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: normal;
+    border: 1px #ccc solid;
+    word-break: break-all;
+  }
+  /* 表の大枠 */
+  &__container {
+    width: 730px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    text-align: center; 
+    @include mq(){
+      width: 100%;
+      overflow-x: scroll;
+    }
+  }
+  &__table {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    width: 100%;
+    border: 1px #ccc solid;
+    word-break: break-all;
+    margin: 0 auto;
+  }
+  /* 表の見出しの列の共通スタイル */
+  &__th {
+    white-space: nowrap;
+    font-size: 14px;
+    & th {
+      padding: 8px 11px;
+    }
+  }
+  &__tbody th {
+    width: 32px;
+    vertical-align: middle;
+    padding: 10px 15px;
+  }
+  &__tbody td {
+    width: 32px;
+    font-weight: normal;
+    border: 1px #ccc solid;
+    word-break: break-all;
+    vertical-align: middle;
+  }
+  &__hit{
+    color: white;
+    background-color: red;
+  }
+}
