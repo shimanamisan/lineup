@@ -773,6 +773,9 @@ $SKYCUP = "";
       </section>
     </main>
 
-<?php // フッターを読み込み
-require "footer.php";
+<?php
+// フッターを読み込み
+// フッターを読み込み
+?>require "footer.php";
 ?>
+ ?>
