@@ -13,6 +13,9 @@ require "head.php";
 require "header.php";
 
 $top_news = [
+    "2021.01.30" => "VS ひらぱーずを更新しました。",
+    "2021.01.17" => "VS 新撰組を更新しました。",
+    "2021.01.09" => "VS ガナーズを更新しました。",
     "2020.12.05" => "VS サンドロットを更新しました。",
     "2020.11.28" => "VS ナイトスターズを更新しました。",
     "2020.11.21" => "VS 大阪ウルトラスを更新しました。",
@@ -176,60 +179,16 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
             <i class="p-slider p-slider__prev js-slide-prev fas fa-chevron-left"></i>
             <i class="p-slider p-slider__next js-slide-next fas fa-chevron-right"></i>
             <ul class="p-homeCategory__movie p-homeCategory__movie__list p-slider__container">
-              <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe
-                  class="p-youtube"
-                  src="https://www.youtube.com/embed/M6mGUH_gsyU"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </li>
-              <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe
-                  class="p-youtube"
-                  src="https://www.youtube.com/embed/lLH7XCjYgpE"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen
-                ></iframe>
-              </li>
-              <!-- start ここが最初中央に配置される -->
-              <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe
-                  class="p-youtube"
-                  src="https://www.youtube.com/embed/IH52aBOIhPU" 
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </li>
-              <!-- end ここが最初中央に配置される -->
-              <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe 
-                  class="p-youtube"
-                  src="https://www.youtube.com/embed/KENrLCcGzOw"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
-                </iframe>
-              </li>
-              <li class="p-homeCategory__movie__item p-slider__item">
-                <iframe
-                  class="p-youtube"
-                  src="https://www.youtube.com/embed/n6uQNIvgLco"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen
-                ></iframe>
-              </li>
+              
+              <?php require "movie.php"; ?>
+
             </ul>
           </div>
         </div>
       </section>
     </main>
 
-    <?php
+    <?php 
 // フッターを読み込み
 require "footer.php";
 ?>
