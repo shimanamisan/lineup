@@ -12,6 +12,15 @@
               </li>
               <!-- start ここが最初中央に配置される -->
               <li class="p-homeCategory__movie__item p-slider__item">
+               <iframe class="p-youtube" 
+                src="https://www.youtube.com/embed/ZK06YLThd-Y" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+                </iframe>
+              </li>
+              <!-- end ここが最初中央に配置される -->
+              <li class="p-homeCategory__movie__item p-slider__item">
               <iframe class="p-youtube" 
                 src="https://www.youtube.com/embed/jhkh5lZDLy8"
                 frameborder="0" 
@@ -19,7 +28,6 @@
                 allowfullscreen>
                 </iframe>
               </li>
-              <!-- end ここが最初中央に配置される -->
               <li class="p-homeCategory__movie__item p-slider__item">
               <iframe 
                 class="p-youtube" 
