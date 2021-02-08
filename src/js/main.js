@@ -185,7 +185,6 @@ youtube動画自動無限ループ
           DURATION,
           function () {
             // アニメーション完了時、先頭の要素を最後尾に移動する
-
             $sliderContainer.append($(".p-slider__container li:first-child"));
             $sliderContainer.css(sliderNextObj);
           }
@@ -224,6 +223,8 @@ youtube動画自動無限ループ
   })();
   // オブジェクト内のメソッドを実行
   slider.init();
+  // 自動スライドをONにする
+  setInterval(slider.slideNext, 3000);
 
   /***********************************************
 メール送信後、トップページへリダイレクトさせる処理
