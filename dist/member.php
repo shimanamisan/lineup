@@ -195,9 +195,6 @@ require "header.php";
 <p class="p-member__text">
 活動は毎週行っており、ポジションは当日参加するメンバーによって決める為、複数ポジションを守って頂くことになります。
 </p>
-<p class="p-member__text">
-※チーム事情として捕手が足りておりません。
-</p>
 <ul>
 <li class="p-member__text">■20代歓迎。</li>
 <li class="p-member__text">■性格重視で社会性がある方。</li>

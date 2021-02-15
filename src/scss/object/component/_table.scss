@@ -1,6 +1,7 @@
 .c-table {
-    padding-top: 80px;
-    padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  color: #000;
   &__table {
     width: 100%;
     border: 1px #ccc solid;
@@ -15,7 +16,7 @@
       vertical-align: middle;
       padding: 10px 15px;
       background-color: #f7f7f7;
-      @include mq(){
+      @include mq() {
         display: block;
         width: 100%;
         box-sizing: border-box;
@@ -26,7 +27,7 @@
       border: 1px #ccc solid;
       word-break: break-all;
       padding: 10px 15px;
-      @include mq(){
+      @include mq() {
         display: block;
       }
     }
