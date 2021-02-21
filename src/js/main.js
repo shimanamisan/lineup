@@ -1,5 +1,14 @@
 import $ from "jquery";
 
+const debug_flg = true;
+
+// デバッグ関数
+function debug(str) {
+  if (debug_flg) {
+    console.log(str);
+  }
+}
+
 $(function () {
   "use strict";
 
@@ -20,14 +29,14 @@ $(function () {
 
       // indexOf("=") とすると、= という文字が何番目にあるのか、というのが返ってくる
       let valuIndex = targetCookie.indexOf("=");
-      console.log(valuIndex);
+      debug(valuIndex);
 
       if (targetCookie.substring(0, valuIndex) === key) {
         // キーが引数と一致した場合値を返す
-        console.log(valuIndex); // 4
-        console.log(targetCookie.substring(0, valuIndex)); // name
-        console.log(typeof targetCookie);
-        console.log("targetCookieのif文でtrueの判定です " + targetCookie);
+        debug(valuIndex); // 4
+        debug(targetCookie.substring(0, valuIndex)); // name
+        debug(typeof targetCookie);
+        debug("targetCookieのif文でtrueの判定です " + targetCookie);
         return decodeURIComponent(targetCookie.slice(valuIndex + 1));
       }
     }
@@ -36,7 +45,40 @@ $(function () {
     return "";
   }
 
-  console.log("getCookie関数：" + getCookie("name"));
+  debug("getCookie関数：" + getCookie("name"));
+
+  /******************************************* 
+ページ表示速度向上のため、YouTube動画をサムネイル表示に切り替える
+*********************************************/
+  let $youtubeLazy = $(".js-youtube-lazyLoad");
+  // すべて取得した要素に対してループ処理を行う
+  $youtubeLazy.each(function () {
+    // 子要素の中のiframeタグを取得する
+    let iframe = $(this).children("iframe");
+    // debug(iframe);
+    let url = iframe.attr("data-src");
+    // debug(url);
+    // 動画URLの末尾11桁の英数字を切り出す
+    let id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
+    debug(id);
+    iframe
+      .before(
+        '<img src="http://img.youtube.com/vi/' + id + '/mqdefault.jpg" />'
+      )
+      .remove();
+    debug($(this));
+    $(this).on("click", function () {
+      // imgタグを削除
+      console.log($(this).children('img').remove())
+      // li要素の子要素にiframeタグ及び動画情報を追加
+      $(this)
+        .append(
+          '<iframe class="p-youtube" src="https://www.youtube.com/embed/' +
+            id +
+            '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        )
+    });
+  });
 
   /*******************************************
 ユーザーエージェントよりスマホ端末か判定する
@@ -47,15 +89,15 @@ $(function () {
       window.navigator.userAgent
     );
     let $mainVisual = $(".js-mainVisual");
-    let $youtube = $(".js-youtube");
+    let $youtube = $(".js-youtube-container");
 
     // オブジェクトを返す
     return {
       phoneFlg: function () {
         if (phoneActive) {
-          console.log("ユーザーエージェントを実行");
-          console.log("window.outerHeightを見ています ：" + window.outerHeight);
-          console.log("innerHeightを見ています ：" + window.innerHeight);
+          debug("ユーザーエージェントを実行");
+          debug("window.outerHeightを見ています ：" + window.outerHeight);
+          debug("innerHeightを見ています ：" + window.innerHeight);
           $mainVisual.css({
             height: `${window.innerHeight}`,
           });
@@ -82,7 +124,7 @@ $(function () {
     $jsBody.css("overflow", "hidden");
     // 読み込みが完了したら、コールバックの処理を実行する
     $(window).on("load", function () {
-      console.log("初回アクセス時");
+      debug("初回アクセス時");
       $jsLoadingModule.fadeOut("slow", function () {
         setTimeout(() => {
           $jsBody.css("overflow", "");
@@ -95,17 +137,17 @@ $(function () {
     });
   } else {
     $jsBody.css("overflow", "");
-    console.log("2回目以降");
+    debug("2回目以降");
   }
 
   /****************************************
 フッターをを固定する
 *****************************************/
   let $ftr = $("#footer");
-  console.log($ftr.offset());
-  console.log($ftr.offset().top);
-  console.log($ftr.outerHeight());
-  console.log(window.innerHeight);
+  debug($ftr.offset());
+  debug($ftr.offset().top);
+  debug($ftr.outerHeight());
+  debug(window.innerHeight);
   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
     $ftr.attr({
       style:
@@ -121,10 +163,10 @@ $(function () {
   let $jsScrollHeader = $(".js-scroll-trigger");
   let $jsHeaderLogo = $(".js-p-header__logo");
   let $pageTop = $(".js-pagetop"); // トップページへ戻るリンクの要素
-  let $jsThirdSection = $(".js-thirdSection");
+  // let $jsThirdSection = $(".js-thirdSection");
 
   $(window).scroll(function () {
-    console.log($(window).scrollTop());
+    // debug($(window).scrollTop());
     // scrollTop：要素のスクロール位置（Y座標）を取得
     if ($(window).scrollTop() >= 400) {
       // スクロール位置が250を超えたらtrueに分岐
@@ -224,7 +266,7 @@ youtube動画自動無限ループ
   // オブジェクト内のメソッドを実行
   slider.init();
   // 自動スライドをONにする
-  setInterval(slider.slideNext, 3000);
+  // setInterval(slider.slideNext, 3000);
 
   /***********************************************
 メール送信後、トップページへリダイレクトさせる処理
