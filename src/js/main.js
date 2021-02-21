@@ -69,14 +69,13 @@ $(function () {
     debug($(this));
     $(this).on("click", function () {
       // imgタグを削除
-      console.log($(this).children('img').remove())
+      $(this).children("img").remove();
       // li要素の子要素にiframeタグ及び動画情報を追加
-      $(this)
-        .append(
-          '<iframe class="p-youtube" src="https://www.youtube.com/embed/' +
-            id +
-            '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-        )
+      $(this).append(
+        '<iframe class="p-youtube" src="https://www.youtube.com/embed/' +
+          id +
+          '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      );
     });
   });
 
