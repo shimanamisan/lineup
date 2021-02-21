@@ -175,7 +175,7 @@ debug(" 画像用パスの配列 inndex.php" . print_r($imgPath, true));
         </div>
       </section>
 
-      <section class="c-homeContainer p-homeCategory u-hidden u-padding__top--xxl js-youtube">
+      <section class="c-homeContainer p-homeCategory u-hidden u-padding__top--xxl js-youtube-container">
         <h2 class="p-homeCategory__movie__title">MOVIE NEWS</h2>
         <div class="flex-wrapp">
           <div class="p-homeCategory__movie p-slider__wrapp p-youtube__container">
