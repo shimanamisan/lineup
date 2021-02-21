@@ -13,7 +13,8 @@ require "head.php";
 require "header.php";
 
 $top_news = [
-    "2021.02.06" => "VS Arc Baseball Clubを更新しました。",
+    "2021.02.20" => "VS KTクラブを更新しました。",
+    "2021.02.13" => "VS Arc Baseball Clubを更新しました。",
     "2021.02.06" => "VS Samurai Spiritsを更新しました。",
     "2021.01.30" => "VS ひらぱーずを更新しました。",
     "2021.01.17" => "VS 新撰組を更新しました。",
