@@ -120,12 +120,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 68%;
       @include mq() {
         padding-left: 16px;
         padding-right: 16px;
       }
       @include mq(md) {
-        left: 47%;
+        width: 82%;
       }
     }
     &__title {
@@ -142,7 +143,7 @@
     }
     &__text {
       font-size: 1.5rem;
-      width: 68%;
+      // width: 68%;
       @include mq() {
         font-size: 1.1rem;
         width: 100%;

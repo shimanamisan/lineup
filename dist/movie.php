@@ -68,12 +68,3 @@
                   allowfullscreen>
                 </iframe>
               </li>
-              <li class="p-homeCategory__movie__item p-slider__item js-youtube-lazyLoad">
-                <iframe
-                  class="p-youtube"
-                  data-src="https://www.youtube.com/embed/n6uQNIvgLco"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
-                </iframe>
-              </li>
