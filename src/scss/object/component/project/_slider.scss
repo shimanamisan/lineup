@@ -13,7 +13,7 @@
     width: 980px;
     margin: 0 auto;
     position: relative;
-    @include mq(md){
+    @include mq(md) {
       width: 100%;
     }
   }
@@ -24,15 +24,15 @@
     list-style: none;
     position: relative;
     padding-top: 56px;
-    @include mq(){
+    @include mq() {
       padding-top: 48px;
     }
   }
   &__item {
     float: left;
     width: 980px;
-    height: 500px;
-    @include mq(){
+    height: 550px;
+    @include mq() {
       width: 372px;
       height: 300px;
     }
@@ -40,6 +40,8 @@
   &__prev {
     left: -6%;
     padding: 24px;
+    background-color: #000;
+    opacity: 0.8;
     @include mq(md) {
       left: -2%;
     }
@@ -50,6 +52,8 @@
   &__next {
     right: -6%;
     padding: 24px;
+    background-color: #000;
+    opacity: 0.8;
     @include mq(md) {
       right: -2%;
     }
