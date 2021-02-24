@@ -265,7 +265,7 @@ youtube動画自動無限ループ
   // オブジェクト内のメソッドを実行
   slider.init();
   // 自動スライドをONにする
-  setInterval(slider.slideNext, 3000);
+  // setInterval(slider.slideNext, 5000);
 
   /***********************************************
 メール送信後、トップページへリダイレクトさせる処理
